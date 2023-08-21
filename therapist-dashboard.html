@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serenity Well</title>
+
+  <!-- bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- style css -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="dash">
+    <!-- topbar -->
+    <section class="topbar py-2 bg-white">
+      <div class="container-fluid px-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="">
+            <img src="img/dashboard-logo.png" class="img-fluid" alt="" />
+          </a>
+          <a href="" class="avatar"> BB </a>
+        </div>
+      </div>
+    </section>
+    <!-- topbar -->
+
+    <!-- panel -->
+    <section class="panel py-2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2 sidebar">
+            <ul class="list-unstyled m-0 p-0">
+              <li>
+                <a href="" class="active menu-item text-decoration-none">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="" class="menu-item text-decoration-none">
+                  Bookings
+                </a>
+              </li>
+              <li>
+                <a href="therapist-calendar.html" class="menu-item text-decoration-none">
+                  Availability
+                </a>
+              </li>
+              <li>
+                <a href="" class="menu-item text-decoration-none">
+                  Billing
+                </a>
+              </li>
+              <li>
+                <a href="" class="menu-item text-decoration-none">
+                  Activity
+                </a>
+              </li>
+              <li>
+                <a href="" class="menu-item text-decoration-none"> Chat </a>
+              </li>
+              <li>
+                <a href="" class="menu-item text-decoration-none">
+                  Setting
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-10 main">
+            <!-- charts -->
+            <section class="charts py-4">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="card shadow border-green">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <h4>Total Sales</h4>
+                          <h6 class="green-link">R20.4K</h6>
+                        </div>
+                        <img src="img/chart6.svg" class="img-fluid" alt="" />
+                      </div>
+                      <p class="mb-0 mt-3">You seen 20 clients</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card shadow border-green">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <h4>Bookings</h4>
+                          <h6 class="green-link">05</h6>
+                        </div>
+                        <img src="img/chart4.svg" class="img-fluid" alt="" />
+                      </div>
+                      <p class="mb-0 mt-3">Your Booking this week</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card shadow border-green">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <h4>Rating and Reviews</h4>
+                          <h6 class="green-link">
+                            4.5 <i class="fas fa-star text-warning"></i>
+                            <a href="" class="fs-14 green-link">
+                              (78 Reviews)
+                            </a>
+                          </h6>
+                        </div>
+                        <img src="img/chart5.svg" class="img-fluid" alt="" />
+                      </div>
+                      <p class="mb-0 mt-3">Overall clients feedback</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- charts -->
+            <!-- secondary nav -->
+            <section class="secondary-nav py-4">
+              <div class="container">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="d-flex justify-content-start gap-5">
+                      <a href="" class="text-dark font-bold text-decoration-none">
+                        All
+                      </a>
+                      <a href="" class="green-link font-bold text-decoration-none">
+                        Massage
+                      </a>
+                      <a href="" class="text-dark font-bold text-decoration-none">
+                        Nails
+                      </a>
+                      <a href="" class="text-dark font-bold text-decoration-none">
+                        Facials
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="d-flex justify-content-end gap-2">
+                      <a href="therapist-signup.html" class="btn btn-green w-auto">
+                        Set Availability
+                      </a>
+                      <a href="therapist-signup.html" class="btn btn-green w-auto">
+                        Add a Service <i class="fa fa-plus ms-2"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- secondary nav -->
+
+            <!-- breadcrumb -->
+            <section class="breadcrumb">
+              <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center gap-3">
+                    <p class="mb-0"><i class="fa fa-home"></i> Home</p>
+                    <i class="fa fa-chevron-right"></i>
+                    <p class="green-link mb-0">Quick Massage</p>
+                    <i class="fa fa-chevron-right"></i>
+                    <p class="green-link mb-0">Full Body Massage</p>
+                  </div>
+
+                  <button class="btn">
+                    <img src="img/sort.png" class="img-fluid sort" alt="" />
+                  </button>
+                </div>
+              </div>
+            </section>
+            <!-- breadcrumb -->
+
+            <!-- specialization -->
+            <section class="specialization py-5">
+              <div class="container">
+                <form action="">
+                  <div class="form-floating mb-3">
+                    <input required type="email" class="form-control select" id="floatingInput"
+                      placeholder="name@example.com" />
+                    <label class="mb-0" for="floatingInput">Specialization</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input required type="text" class="form-control search" id="floatingInput"
+                      placeholder="name@example.com" />
+                    <label class="mb-0" for="floatingInput">Search</label>
+                  </div>
+                </form>
+              </div>
+            </section>
+            <!-- specialization -->
+
+            <!-- trx -->
+            <section class="trx pb-5">
+              <div class="container">
+                <img src="img/trx.png" class="img-fluid w-100" alt="" />
+              </div>
+            </section>
+            <!-- trx -->
+
+            <!-- services -->
+            <section class="services">
+              <div class="container-fluid px-4">
+                <div class="row">
+                  <div class="col-md-6 p-2">
+                    <div class="card p-0 border rounded-2 overflow-hidden">
+                      <div class="row">
+                        <div class="col-md-4 p-0">
+                          <img src="img/s-1.png" class="img-fluid h-100 object-fit-cover" alt="" />
+                        </div>
+                        <div class="col-md-4 m-auto p-2">
+                          <h6>Nolly Johnson</h6>
+                          <p class="fs-14 mb-1">
+                            Experience:
+                            <span class="fs-10 d-block">5 years experience</span>
+                          </p>
+                          <p class="fs-14 mb-2">
+                            Accreditation:
+                            <span class="fs-10 d-block">Member of the Therapist Board</span>
+                          </p>
+
+                          <div class="flex fs-14 justify-content-between align-items-center">
+                            <span>
+                              4.3 <i class="fa fa-star text-warning"></i>
+                            </span>
+                            <span>(107 Reviews) </span>
+                          </div>
+                        </div>
+                        <div class="col-md-4 h-full d-flex flex-column justify-content-between ps-0 border-start">
+                          <div class="text-end mb-1">
+                            <span class="bage d-inline-block px-3 py-1">
+                              Services:
+                            </span>
+
+                            <p class="fs-12 text-start my-4 ps-3">
+                              Massage: Full Body Massage and Quick Body
+                              Massage
+                            </p>
+
+                            <a href="" class="btn-green block bookbtn w-100 py-2 fs-14 btn w-100">
+                              View
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 p-2">
+                    <div class="card p-0 border rounded-2 overflow-hidden">
+                      <div class="row">
+                        <div class="col-md-4 p-0">
+                          <img src="img/s-1.png" class="img-fluid h-100 object-fit-cover" alt="" />
+                        </div>
+                        <div class="col-md-4 m-auto p-2">
+                          <h6>Nolly Johnson</h6>
+                          <p class="fs-14 mb-1">
+                            Experience:
+                            <span class="fs-10 d-block">5 years experience</span>
+                          </p>
+                          <p class="fs-14 mb-2">
+                            Accreditation:
+                            <span class="fs-10 d-block">Member of the Therapist Board</span>
+                          </p>
+
+                          <div class="flex fs-14 justify-content-between align-items-center">
+                            <span>
+                              4.3 <i class="fa fa-star text-warning"></i>
+                            </span>
+                            <span>(107 Reviews) </span>
+                          </div>
+                        </div>
+                        <div class="col-md-4 h-full d-flex flex-column justify-content-between ps-0 border-start">
+                          <div class="text-end mb-1">
+                            <span class="bage d-inline-block px-3 py-1">
+                              Services:
+                            </span>
+
+                            <p class="fs-12 text-start my-4 ps-3">
+                              Massage: Full Body Massage and Quick Body
+                              Massage
+                            </p>
+
+                            <a href="" class="btn-green block bookbtn w-100 py-2 fs-14 btn w-100">
+                              View
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 p-2">
+                    <div class="card p-0 border rounded-2 overflow-hidden">
+                      <div class="row">
+                        <div class="col-md-4 p-0">
+                          <img src="img/s-1.png" class="img-fluid h-100 object-fit-cover" alt="" />
+                        </div>
+                        <div class="col-md-4 m-auto p-2">
+                          <h6>Nolly Johnson</h6>
+                          <p class="fs-14 mb-1">
+                            Experience:
+                            <span class="fs-10 d-block">5 years experience</span>
+                          </p>
+                          <p class="fs-14 mb-2">
+                            Accreditation:
+                            <span class="fs-10 d-block">Member of the Therapist Board</span>
+                          </p>
+
+                          <div class="flex fs-14 justify-content-between align-items-center">
+                            <span>
+                              4.3 <i class="fa fa-star text-warning"></i>
+                            </span>
+                            <span>(107 Reviews) </span>
+                          </div>
+                        </div>
+                        <div class="col-md-4 h-full d-flex flex-column justify-content-between ps-0 border-start">
+                          <div class="text-end mb-1">
+                            <span class="bage d-inline-block px-3 py-1">
+                              Services:
+                            </span>
+
+                            <p class="fs-12 text-start my-4 ps-3">
+                              Massage: Full Body Massage and Quick Body
+                              Massage
+                            </p>
+
+                            <a href="" class="btn-green block bookbtn w-100 py-2 fs-14 btn w-100">
+                              View
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 p-2">
+                    <div class="card p-0 border rounded-2 overflow-hidden">
+                      <div class="row">
+                        <div class="col-md-4 p-0">
+                          <img src="img/s-1.png" class="img-fluid h-100 object-fit-cover" alt="" />
+                        </div>
+                        <div class="col-md-4 m-auto p-2">
+                          <h6>Nolly Johnson</h6>
+                          <p class="fs-14 mb-1">
+                            Experience:
+                            <span class="fs-10 d-block">5 years experience</span>
+                          </p>
+                          <p class="fs-14 mb-2">
+                            Accreditation:
+                            <span class="fs-10 d-block">Member of the Therapist Board</span>
+                          </p>
+
+                          <div class="flex fs-14 justify-content-between align-items-center">
+                            <span>
+                              4.3 <i class="fa fa-star text-warning"></i>
+                            </span>
+                            <span>(107 Reviews) </span>
+                          </div>
+                        </div>
+                        <div class="col-md-4 h-full d-flex flex-column justify-content-between ps-0 border-start">
+                          <div class="text-end mb-1">
+                            <span class="bage d-inline-block px-3 py-1">
+                              Services:
+                            </span>
+
+                            <p class="fs-12 text-start my-4 ps-3">
+                              Massage: Full Body Massage and Quick Body
+                              Massage
+                            </p>
+
+                            <a href="" class="btn-green block bookbtn w-100 py-2 fs-14 btn w-100">
+                              View
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 p-2">
+                    <div class="card p-0 border rounded-2 overflow-hidden">
+                      <div class="row">
+                        <div class="col-md-4 p-0">
+                          <img src="img/s-1.png" class="img-fluid h-100 object-fit-cover" alt="" />
+                        </div>
+                        <div class="col-md-4 m-auto p-2">
+                          <h6>Nolly Johnson</h6>
+                          <p class="fs-14 mb-1">
+                            Experience:
+                            <span class="fs-10 d-block">5 years experience</span>
+                          </p>
+                          <p class="fs-14 mb-2">
+                            Accreditation:
+                            <span class="fs-10 d-block">Member of the Therapist Board</span>
+                          </p>
+
+                          <div class="flex fs-14 justify-content-between align-items-center">
+                            <span>
+                              4.3 <i class="fa fa-star text-warning"></i>
+                            </span>
+                            <span>(107 Reviews) </span>
+                          </div>
+                        </div>
+                        <div class="col-md-4 h-full d-flex flex-column justify-content-between ps-0 border-start">
+                          <div class="text-end mb-1">
+                            <span class="bage d-inline-block px-3 py-1">
+                              Services:
+                            </span>
+
+                            <p class="fs-12 text-start my-4 ps-3">
+                              Massage: Full Body Massage and Quick Body
+                              Massage
+                            </p>
+
+                            <a href="" class="btn-green block bookbtn w-100 py-2 fs-14 btn w-100">
+                              View
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 p-2">
+                    <div class="card p-0 border rounded-2 overflow-hidden">
+                      <div class="row">
+                        <div class="col-md-4 p-0">
+                          <img src="img/s-1.png" class="img-fluid h-100 object-fit-cover" alt="" />
+                        </div>
+                        <div class="col-md-4 m-auto p-2">
+                          <h6>Nolly Johnson</h6>
+                          <p class="fs-14 mb-1">
+                            Experience:
+                            <span class="fs-10 d-block">5 years experience</span>
+                          </p>
+                          <p class="fs-14 mb-2">
+                            Accreditation:
+                            <span class="fs-10 d-block">Member of the Therapist Board</span>
+                          </p>
+
+                          <div class="flex fs-14 justify-content-between align-items-center">
+                            <span>
+                              4.3 <i class="fa fa-star text-warning"></i>
+                            </span>
+                            <span>(107 Reviews) </span>
+                          </div>
+                        </div>
+                        <div class="col-md-4 h-full d-flex flex-column justify-content-between ps-0 border-start">
+                          <div class="text-end mb-1">
+                            <span class="bage d-inline-block px-3 py-1">
+                              Services:
+                            </span>
+
+                            <p class="fs-12 text-start my-4 ps-3">
+                              Massage: Full Body Massage and Quick Body
+                              Massage
+                            </p>
+
+                            <a href="" class="btn-green block bookbtn w-100 py-2 fs-14 btn w-100">
+                              View
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 p-2">
+                    <div class="card p-0 border rounded-2 overflow-hidden">
+                      <div class="row">
+                        <div class="col-md-4 p-0">
+                          <img src="img/s-1.png" class="img-fluid h-100 object-fit-cover" alt="" />
+                        </div>
+                        <div class="col-md-4 m-auto p-2">
+                          <h6>Nolly Johnson</h6>
+                          <p class="fs-14 mb-1">
+                            Experience:
+                            <span class="fs-10 d-block">5 years experience</span>
+                          </p>
+                          <p class="fs-14 mb-2">
+                            Accreditation:
+                            <span class="fs-10 d-block">Member of the Therapist Board</span>
+                          </p>
+
+                          <div class="flex fs-14 justify-content-between align-items-center">
+                            <span>
+                              4.3 <i class="fa fa-star text-warning"></i>
+                            </span>
+                            <span>(107 Reviews) </span>
+                          </div>
+                        </div>
+                        <div class="col-md-4 h-full d-flex flex-column justify-content-between ps-0 border-start">
+                          <div class="text-end mb-1">
+                            <span class="bage d-inline-block px-3 py-1">
+                              Services:
+                            </span>
+
+                            <p class="fs-12 text-start my-4 ps-3">
+                              Massage: Full Body Massage and Quick Body
+                              Massage
+                            </p>
+
+                            <a href="" class="btn-green block bookbtn w-100 py-2 fs-14 btn w-100">
+                              View
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 p-2">
+                    <div class="card p-0 border rounded-2 overflow-hidden">
+                      <div class="row">
+                        <div class="col-md-4 p-0">
+                          <img src="img/s-1.png" class="img-fluid h-100 object-fit-cover" alt="" />
+                        </div>
+                        <div class="col-md-4 m-auto p-2">
+                          <h6>Nolly Johnson</h6>
+                          <p class="fs-14 mb-1">
+                            Experience:
+                            <span class="fs-10 d-block">5 years experience</span>
+                          </p>
+                          <p class="fs-14 mb-2">
+                            Accreditation:
+                            <span class="fs-10 d-block">Member of the Therapist Board</span>
+                          </p>
+
+                          <div class="flex fs-14 justify-content-between align-items-center">
+                            <span>
+                              4.3 <i class="fa fa-star text-warning"></i>
+                            </span>
+                            <span>(107 Reviews) </span>
+                          </div>
+                        </div>
+                        <div class="col-md-4 h-full d-flex flex-column justify-content-between ps-0 border-start">
+                          <div class="text-end mb-1">
+                            <span class="bage d-inline-block px-3 py-1">
+                              Services:
+                            </span>
+
+                            <p class="fs-12 text-start my-4 ps-3">
+                              Massage: Full Body Massage and Quick Body
+                              Massage
+                            </p>
+
+                            <a href="" class="btn-green block bookbtn w-100 py-2 fs-14 btn w-100">
+                              View
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- services -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- panel -->
+  </div>
+  <!-- jquery cdn -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- bootstrap cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- app js -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
