@@ -2,7 +2,7 @@ const serviceSelect = document.getElementById("serviceSelect");
 let id = "";
 const initiateBookingForm = document.getElementById("initiate-booking");
 
-fetch("http://localhost:8000/api/v1/therapistServices", {
+fetch("https://serinity-well-server.vercel.app/api/v1/therapistServices", {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
@@ -38,7 +38,7 @@ initiateBookingForm.addEventListener("submit", (e) => {
     isHotel,
   };
 
-  fetch(`http://localhost:8000/api/v1/addCustomerBooking`, {
+  fetch(`https://serinity-well-server.vercel.app/api/v1/addCustomerBooking`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
