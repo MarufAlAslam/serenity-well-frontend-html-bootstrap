@@ -1,5 +1,12 @@
 const customerLoginForm = document.getElementById("customerLoginForm");
 
+// if local storage has activeUser, redirect to customer-dashboard.html
+const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+
+if (activeUser) {
+  window.location.href = "customer-dashboard.html";
+}
+
 customerLoginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
