@@ -110,45 +110,45 @@
                                     <hr class="my-4">
 
 
-                                    <form action="" class="mt-4">
+                                    <form action="" class="mt-4" id="booking-extra-form">
                                         <div class="form-floating mb-3">
-                                            <input required type="text" class="form-control select" id="floatingInput"
+                                            <input required type="text" name="haveMesageTable" class="form-control select" id="floatingInput"
                                                 placeholder="name@example.com" />
                                             <label class="mb-0" for="floatingInput">
-                                                Do you have a massage table?
+                                                Do you have a masage table?
                                             </label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input required type="text" class="form-control select" id="floatingInput"
+                                            <input required type="text" name="isRequiredStairs" class="form-control select" id="floatingInput"
                                                 placeholder="name@example.com" />
                                             <label class="mb-0" for="floatingInput">
                                                 Are Stairs Required For Access?
                                             </label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input required type="text" class="form-control select" id="floatingInput"
+                                            <input required type="text" name="haveSerenityWellTowel" class="form-control select" id="floatingInput"
                                                 placeholder="name@example.com" />
                                             <label class="mb-0" for="floatingInput">
                                                 Do you have Serenity Well towels?
                                             </label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input required type="text" class="form-control" id="floatingInput"
+                                            <input required type="text" name="healthInstruction" class="form-control" id="floatingInput"
                                                 placeholder="name@example.com" />
                                             <label class="mb-0" for="floatingInput">
                                                 Special health instructions
                                             </label>
                                         </div>
                                         <div class="d-flex justify-content-start  mb-3 align-items-center">
-                                            <input required type="checkbox" name="" id="c1">
+                                            <input type="checkbox" name="healthReminder" id="c1">
                                             <label for="c1" class="mx-2 w-auto">
                                                 Health Reminder
                                             </label>
                                             <i class="fa fa-info-circle fs-12"></i>
                                         </div>
                                         <div class="d-flex mb-3 justify-content-start align-items-center">
-                                            <input required type="checkbox" name="" id="c1">
-                                            <label for="c1" class="mx-2 w-auto">
+                                            <input type="checkbox" name="antiHarassments" id="c2">
+                                            <label for="c2" class="mx-2 w-auto">
                                                 Anti Harassments
                                             </label>
                                             <i class="fa fa-info-circle fs-12"></i>
@@ -158,10 +158,14 @@
                                             <a href="customer-booking.html" class="btn text-green px-5">
                                                 Back
                                             </a>
-                                            <a href="customer-booking-details.html"
+                                            <!-- <a href="customer-booking-details.html"
                                                 class="btn btn-green w-auto rounded-pill px-5">
                                                 Continue
-                                            </a>
+                                            </a> -->
+
+                                            <button type="submit" class="btn btn-green px-5 rounded-pill w-auto">
+                                                Continue
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
@@ -184,6 +188,8 @@
 
     <script src="js/customer-dashboard.js"></script>
     <script src="js/customer-logout.js"></script>
+
+    <script src="js/booking-extra.js"></script>
 </body>
 
 </html>

@@ -132,8 +132,8 @@
                       a service depending on the Service provider availability.
                     </p>
 
-                    <form action="">
-                      <div class="form-floating mb-3">
+                    <form action="" id="initiate-booking">
+                      <!-- <div class="form-floating mb-3">
                         <input
                           required
                           type="email"
@@ -142,13 +142,22 @@
                           placeholder="name@example.com"
                         />
                         <label class="mb-0" for="floatingInput">Service</label>
-                      </div>
+                      </div> -->
+                      <label for="">
+                        Select Service
+                      </label>
+                      <select name="service" class="form-select mb-3" id="serviceSelect">
+                        <option value="" disabled>
+                            Select Service
+                        </option>
+                      </select>
                       <div class="form-floating mb-3">
                         <input
                           required
-                          type="email"
+                          type="text"
                           class="form-control select"
                           id="floatingInput"
+                          name="serviceIsFor"
                           placeholder="name@example.com"
                         />
                         <label class="mb-0" for="floatingInput"
@@ -158,9 +167,10 @@
                       <div class="form-floating mb-3">
                         <input
                           required
-                          type="email"
+                          type="text"
                           class="form-control select"
                           id="floatingInput"
+                          name="address"
                           placeholder="name@example.com"
                         />
                         <label class="mb-0" for="floatingInput">Address</label>
@@ -168,9 +178,10 @@
                       <div class="form-floating mb-3">
                         <input
                           required
-                          type="email"
+                          type="text"
                           class="form-control select"
                           id="floatingInput"
+                          name="isHotel"
                           placeholder="name@example.com"
                         />
                         <label class="mb-0" for="floatingInput"
@@ -187,12 +198,15 @@
                         >
                           Back
                         </a>
-                        <a
+                        <!-- <a
                           href="customer-booking-details.html"
                           class="btn btn-green w-auto rounded-pill px-5"
                         >
                           Next
-                        </a>
+                        </a> -->
+                        <button class="btn btn-green w-auto rounded-pill px-5" type="submit">
+                            Next
+                        </button>
                       </div>
                     </form>
                   </div>
@@ -216,5 +230,7 @@
     <!-- log out js -->
     <script src="js/customer-dashboard.js"></script>
     <script src="js/customer-logout.js"></script>
+
+    <script src="js/customer-booking.js"></script>
   </body>
 </html>
