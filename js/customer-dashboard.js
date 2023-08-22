@@ -1,0 +1,10 @@
+const avatar = document.querySelector('#avatar');
+
+const activeUser = JSON.parse(localStorage.getItem('activeUser'));
+
+if(activeUser){
+    // get fullName from activeUser and display only the first letter of the words in avatar as innerText
+    const fullName = activeUser.fullName;
+    const firstLetter = fullName.split(' ').map(word => word[0]).join('');
+    avatar.innerText = firstLetter;
+}

@@ -24,6 +24,14 @@ customerLoginForm.addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      window.location.href = "customer-dashboard.html";
+      if(data){
+        alert("Login Successful");
+        // store user data in local storage
+        localStorage.setItem("activeUser", JSON.stringify(data));
+        window.location.href = "customer-dashboard.html";
+      }
+      else{
+        alert("Invalid Credentials");
+      }
     });
 });
