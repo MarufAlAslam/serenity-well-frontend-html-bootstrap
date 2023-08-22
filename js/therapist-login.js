@@ -1,5 +1,12 @@
 const therapistForm = document.querySelector("#therapist-login-form");
 
+// if local storage has activeUser, redirect to customer-dashboard.html
+const activeTherapist = JSON.parse(localStorage.getItem("activeTherapist"));
+
+if (activeTherapist) {
+  window.location.href = "/therapist-dashboard.html";
+}
+
 therapistForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -23,7 +30,13 @@ therapistForm.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((data) => {
       if (data) {
+        alert("Login Successful");
+        // store user data in local storage
+        localStorage.setItem("activeTherapist", JSON.stringify(data));
         window.location.href = "/therapist-dashboard.html";
+      }
+      else{
+        alert("Invalid Credentials");
       }
     });
 });
