@@ -8,7 +8,9 @@ addServiceForm.addEventListener("submit", (e) => {
 
   const form = e.target;
 
+  const serviceName = form.serviceName.value;
   const specialization = form.specialization.value;
+  const price = form.price.value;
   const nailCare = form.nail.value;
   const masage = form.masage.value;
   const facials = form.facials.value;
@@ -23,7 +25,9 @@ addServiceForm.addEventListener("submit", (e) => {
   const isAgreed = form.isAgreed.checked;
 
   const data = {
+    serviceName,
     addedBy: therapistName,
+    price,
     serviceDetails: {
       specialization,
       nailCare,
@@ -43,7 +47,7 @@ addServiceForm.addEventListener("submit", (e) => {
 
   console.log(data);
 
-  fetch("https://serinity-well-server.vercel.app/api/v1/addTherapistService", {
+  fetch("http://localhost:8000/api/v1/addTherapistService", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

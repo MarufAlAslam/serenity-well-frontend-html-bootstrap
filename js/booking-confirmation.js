@@ -4,7 +4,7 @@ const bookingID = localStorage.getItem("bookingID");
 
 // console.log(bookingID);
 
-fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings/${bookingID}`, {
+fetch(`http://localhost:8000/api/v1/customerBookings/${bookingID}`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
@@ -23,7 +23,10 @@ fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings/${booking
                                                         Address
                                                     </p>
                                                     <p class="mb-0 lead">
-                                                        ${data.serviceDetails.address}
+                                                        ${
+                                                          data.serviceDetails
+                                                            .address
+                                                        }
                                                     </p>
                                                 </div>
                                             </div>
@@ -42,16 +45,27 @@ fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings/${booking
                                         <p class="lead fw-bold">
                                             Therapist Booked
                                         </p>
-                                        <div class="col-md-6">
-                                            <div class="card border-0 shadow mb-4">
-                                                <div class="card-body">
+                                        <div class="col-md-6 m-auto">
+                                            <div class="card border mb-4">
+                                                <div class="card-body px-4">
                                                     <div class="row">
-                                                        <div class="col-6">
-                                                            <img src="img/booked.png" class="img-fluid w-100" alt="">
+                                                        <div class="col-5 bg-green text-white d-flex justify-content-center align-items-center fs-1 fw-bold rounded">
+                                                            ${data.serviceDetails.therapistName
+                                                              .split(" ")
+                                                              .map(
+                                                                (word) =>
+                                                                  word[0]
+                                                              )
+                                                              .join("")}
+                                                                
                                                         </div>
-                                                        <div class="col-6 m-auto ">
+                                                        <div class="col-6 m-auto ps-4">
                                                             <p class="fw-bold">
-                                                                Nolly Johnson
+                                                                ${
+                                                                  data
+                                                                    .serviceDetails
+                                                                    .therapistName
+                                                                }
                                                             </p>
                                                             <p class="fs-14">
                                                                 <b>Experience:</b> <br>
@@ -59,7 +73,15 @@ fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings/${booking
                                                             </p>
                                                             <p class="fs-14">
                                                                 <b>Accreditation:</b> <br>
-                                                                Member of the Therapist Board
+                                                                ${
+                                                                  data
+                                                                    ?.serviceDetails
+                                                                    ?.serviceData
+                                                                    ?.qualifications
+                                                                    ?.isMember
+                                                                    ? "Member of the Therapist Board"
+                                                                    : "Not a Member of the Therapist Board"
+                                                                }
                                                             </p>
                                                             <p class="fs-14 mb-0">
                                                                 4.3 <i class="fa fa-star text-warning"></i> (107 Reviews)
@@ -76,27 +98,43 @@ fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings/${booking
                                             <tr>
                                                 <td class="border-0">
                                                     <p class="fw-bold mb-0">
-                                                        90 Min
+                                                        ${
+                                                          data?.serviceDetails
+                                                            ?.serviceData
+                                                            ?.qualifications
+                                                            ?.completeTime
+                                                        }
                                                     </p>
                                                 </td>
                                                 <td class="border-0">
                                                     <p class="mb-0">
-                                                        Sport Massage
+                                                    ${
+                                                      data?.serviceDetails
+                                                        ?.serviceData
+                                                        ?.serviceDetails
+                                                        ?.specialization
+                                                    }
                                                     </p>
                                                 </td>
                                                 <td class="border-0">
                                                     <p class="fw-bold text-green mb-0">
-                                                        R750.00
+                                                        R${
+                                                          data?.serviceDetails
+                                                            ?.price
+                                                        }
                                                     </p>
                                                 </td>
                                                 <td class="border-0">
                                                     <p class="mb-0 fw-bold">
-                                                        Once Off
+                                                        ${
+                                                          data?.serviceDetails
+                                                            ?.date
+                                                        }
                                                     </p>
                                                 </td>
-                                                <td class="border-0">
-                                                    <button class="btn p-0">
-                                                        <i class="fa fa-edit"></i>
+                                                <td class="border-0 text-end">
+                                                    <button class="btn btn-green w-auto px-5" id="booking-confirm">
+                                                        Next
                                                     </button>
                                                 </td>
                                             </tr>
@@ -106,3 +144,10 @@ fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings/${booking
   });
 
 //   console.log(bookingData);
+
+const bookingConfirm = document.querySelector("#booking-confirm");
+
+bookingConfirm.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "customer-booking-payment.html";
+});

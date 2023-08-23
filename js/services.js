@@ -1,6 +1,6 @@
 const services = document.querySelector("#services");
 
-fetch("https://serinity-well-server.vercel.app/api/v1/therapistServices", {
+fetch("http://localhost:8000/api/v1/therapistServices", {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
@@ -17,9 +17,9 @@ fetch("https://serinity-well-server.vercel.app/api/v1/therapistServices", {
           .split(" ")
           .map((word) => word[0])
           .join("");
-        service.classList.add("service");
+        service.classList.add("col-md-6");
         service.innerHTML = `
-              <div class="col-md-6 p-2">
+              <div class="col-md-12 p-2">
                             <div class="card p-0 border rounded-2 overflow-hidden">
                               <div class="row">
                                 <div class="col-md-3 d-flex justify-content-center align-items-center fs-1 fw-bold text-white p-3 p-0 bg-green">
