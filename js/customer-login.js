@@ -32,10 +32,10 @@ customerLoginForm.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((data) => {
       if(data){
-        alert("Login Successful");
+        alert("OTP Sent!");
         // store user data in local storage
         localStorage.setItem("activeUser", JSON.stringify(data));
-        window.location.href = "customer-dashboard.html";
+        window.location.href = "customer-otp.html";
       }
       else{
         alert("Invalid Credentials");

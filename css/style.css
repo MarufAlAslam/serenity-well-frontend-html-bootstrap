@@ -400,6 +400,12 @@ td {
 .h-100vh {
   min-height: 100vh;
 }
+div#therapistBooking div {
+  width: 100%;
+}
+.bg-green.rounded-circle.p-0 {
+  width: 40px !important;
+}
 @media screen and (max-width: 767px) {
   .dash {
     height: auto;
