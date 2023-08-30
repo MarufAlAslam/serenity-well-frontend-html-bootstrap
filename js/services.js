@@ -1,4 +1,5 @@
 const services = document.querySelector("#services");
+let flag = 0;
 
 fetch("https://serinity-well-server.vercel.app/api/v1/therapistServices", {
   method: "GET",
@@ -77,11 +78,10 @@ fetch("https://serinity-well-server.vercel.app/api/v1/therapistServices", {
                                       }
                                     </p>
       
-                                    <a
-                                      href=""
+                                    <a href="customer-book.html?id=${item._id}"
                                       class="btn-green block bookbtn w-100 py-2 fs-14 btn w-100"
                                     >
-                                      View
+                                      View Details
                                     </a>
                                   </div>
                                 </div>
@@ -90,6 +90,7 @@ fetch("https://serinity-well-server.vercel.app/api/v1/therapistServices", {
                           </div>
               `;
         services.appendChild(service);
+        flag = 1;
       });
     } else {
       services.innerHTML = `
@@ -103,5 +104,10 @@ fetch("https://serinity-well-server.vercel.app/api/v1/therapistServices", {
             </div>
         </div>
         `;
+      flag = 0;
     }
   });
+
+// if (flag) {
+
+// }

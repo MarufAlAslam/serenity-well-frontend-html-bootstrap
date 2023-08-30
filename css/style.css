@@ -406,6 +406,24 @@ div#therapistBooking div {
 .bg-green.rounded-circle.p-0 {
   width: 40px !important;
 }
+div#serviceDetails span {
+  background: #036968;
+  display: inline-flex;
+  padding: 5px 20px;
+  color: white;
+  border-radius: 5px;
+}
+.number {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  font-size: 13px;
+  color: black;
+  background-color: #4ddad7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 767px) {
   .dash {
     height: auto;

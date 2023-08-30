@@ -38,7 +38,7 @@ bookingExtraForm.addEventListener('submit', (e) => {
             if (data) {
                 alert("Booking Extra Added Successfully");
                 // store user data in local storage
-                window.location.href = "/customer-booking-confirmation.html";
+                window.location.href = "/customer-booking-pricing.html";
             } else {
                 alert("Something Went Wrong!");
             }

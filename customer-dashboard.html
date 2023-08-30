@@ -79,12 +79,14 @@
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="left">
                           <h4>Total Sessions</h4>
-                          <h6 class="green-link">30</h6>
+                          <h6 class="green-link">
+                            <span id="session"></span>
+                          </h6>
                         </div>
                         <img src="img/chart1.svg" class="img-fluid" alt="" />
                       </div>
                       <p class="mb-0 mt-3">
-                        You were seen by 15 different therapists
+                        You were seen by <span id="num">0</span> different therapists
                       </p>
                     </div>
                   </div>
@@ -95,11 +97,13 @@
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="left">
                           <h4>Total Spent</h4>
-                          <h6 class="green-link">R10.4K</h6>
+                          <h6 class="green-link">R
+                            <span id="spent">0</span>
+                          </h6>
                         </div>
                         <img src="img/chart2.svg" class="img-fluid" alt="" />
                       </div>
-                      <p class="mb-0 mt-3">Number of treatments- 10</p>
+                      <p class="mb-0 mt-3">Number of treatments- <span id="bookingNumber"></span></p>
                     </div>
                   </div>
                 </div>
@@ -109,7 +113,9 @@
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="left">
                           <h4>Bookings</h4>
-                          <h6 class="green-link">70</h6>
+                          <h6 class="green-link">
+                            <span id="bookings"></span>
+                          </h6>
                         </div>
                         <img src="img/chart3.svg" class="img-fluid" alt="" />
                       </div>
@@ -563,6 +569,8 @@
   <script src="js/customer-logout.js"></script>
 
   <script src="js/services.js"></script>
+
+  <script src="js/book-service.js"></script>
 </body>
 
 </html>
