@@ -20,6 +20,32 @@ fetch(`http://localhost:8000/api/v1/customerBookings/${bookingID}`, {
                                                 <i class="fa fa-map-marker-alt lead"></i>
                                                 <div class="">
                                                     <p class="mb-0 lead fw-bold">
+                                                        Date
+                                                    </p>
+                                                    <p class="mb-0 lead">
+                                                        ${
+                                                          data.serviceDetails
+                                                            .date
+                                                        } : ${
+      data.serviceDetails.time
+    }
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-end align-items-center gap-3">
+                                                <button class="btn">
+                                                    <i class="fa fa-edit lead"></i>
+                                                </button>
+                                                <button class="btn">
+                                                    <i class="fa fa-trash-alt lead"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mt-4 justify-content-between align-items-center">
+                                            <div class="d-flex justify-content-start align-items-center gap-3">
+                                                <i class="fa fa-map-marker-alt lead"></i>
+                                                <div class="">
+                                                    <p class="mb-0 lead fw-bold">
                                                         Address
                                                     </p>
                                                     <p class="mb-0 lead">
@@ -119,8 +145,8 @@ fetch(`http://localhost:8000/api/v1/customerBookings/${bookingID}`, {
                                                 <td class="border-0">
                                                     <p class="fw-bold text-green mb-0">
                                                         R${
-                                                          data?.serviceDetails
-                                                            ?.price
+                                                          data
+                                                            ?.servicePrice ? data?.servicePrice : data?.serviceDetails?.serviceData?.price
                                                         }
                                                     </p>
                                                 </td>
@@ -133,9 +159,9 @@ fetch(`http://localhost:8000/api/v1/customerBookings/${bookingID}`, {
                                                     </p>
                                                 </td>
                                                 <td class="border-0 text-end">
-                                                    <button class="btn btn-green w-auto px-5" id="booking-confirm">
+                                                    <a href="customer-booking-payment.html" class="btn btn-green w-auto px-5" id="booking-confirm">
                                                         Next
-                                                    </button>
+                                                    </a>
                                                 </td>
                                             </tr>
                                         </table>

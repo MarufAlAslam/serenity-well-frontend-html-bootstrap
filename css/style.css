@@ -424,6 +424,11 @@ div#serviceDetails span {
   justify-content: center;
   align-items: center;
 }
+
+/* get selected checkbox */
+input[type="radio"]:checked + label .green-border {
+  border-color: rgb(29, 69, 156) !important;
+}
 @media screen and (max-width: 767px) {
   .dash {
     height: auto;

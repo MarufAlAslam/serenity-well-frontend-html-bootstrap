@@ -5,9 +5,9 @@ let price = "";
 let serviceData = {};
 const initiateBookingForm = document.getElementById("initiate-booking");
 
-const user = JSON.parse(localStorage.getItem("activeUser"));
+const userr = JSON.parse(localStorage.getItem("activeUser"));
 
-const userID = user._id;
+const userrID = userr._id;
 
 fetch("http://localhost:8000/api/v1/therapistServices", {
   method: "GET",
@@ -58,10 +58,11 @@ initiateBookingForm.addEventListener("submit", (e) => {
   const serviceIsFor = form.serviceIsFor.value;
   const address = form.address.value;
   const date = form.date.value;
+  const time = form.time.value;
   const isHotel = form.isHotel.value;
 
   const data = {
-    userID,
+    userrID,
     service,
     therapistName,
     serviceData,
@@ -69,6 +70,7 @@ initiateBookingForm.addEventListener("submit", (e) => {
     serviceIsFor,
     address,
     date,
+    time,
     isHotel,
   };
 

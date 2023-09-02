@@ -152,14 +152,25 @@
                         </option>
                       </select>
                       <div class="form-floating mb-3">
-                        <input
+                        <!-- <input
                           required
                           type="text"
                           class="form-control select"
                           id="floatingInput"
                           name="serviceIsFor"
                           placeholder="name@example.com"
-                        />
+                        /> -->
+                        <select class="form-control select" name="serviceIsFor" id="">
+                            <option value="" disabled selected>
+                                Select
+                            </option>
+                            <option value="Myself">
+                                Myself
+                            </option>
+                            <option value="Someone Else">
+                               Someone Else
+                            </option>
+                        </select>
                         <label class="mb-0" for="floatingInput"
                           >The Service is For?</label
                         >
@@ -174,6 +185,17 @@
                           placeholder="name@example.com"
                         />
                         <label class="mb-0" for="floatingInput">Date</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          required
+                          type="time"
+                          class="form-control select"
+                          id="floatingInput"
+                          name="time"
+                          placeholder="name@example.com"
+                        />
+                        <label class="mb-0" for="floatingInput">Time</label>
                       </div>
                       <div class="form-floating mb-3">
                         <input
