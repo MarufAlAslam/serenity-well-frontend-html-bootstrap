@@ -23,7 +23,7 @@ therapistSignupForm.addEventListener("submit", (e) => {
     roll,
   };
 
-  fetch("https://serinity-well-server.vercel.app/api/v1/addTherapist", {
+  fetch("http://localhost:8000/api/v1/addTherapist", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -33,7 +33,7 @@ therapistSignupForm.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((data) => {
       if (data) {
-        window.location.href = "therapist-login.html";
+        window.location.href = "therapist-confirm.html";
       }
     });
 });

@@ -16,7 +16,7 @@ const session = document.getElementById("session");
 const num = document.getElementById("num");
 
 // get all bookings
-fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings`, {
+fetch(`http://localhost:8000/api/v1/customerBookings`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
@@ -36,7 +36,7 @@ const bookingNumber = document.getElementById("bookingNumber");
 const bookings = document.getElementById("bookings");
 
 // get all bookings
-fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings`, {
+fetch(`http://localhost:8000/api/v1/customerBookings`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",

@@ -11,7 +11,7 @@ resetPassword.addEventListener('submit', (e) => {
         password: newPass
     }
 
-    fetch(`https://serinity-well-server.vercel.app/api/v1/customers/updatePassword/${reqEmail}`, {
+    fetch(`http://localhost:8000/api/v1/customers/updatePassword/${reqEmail}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
