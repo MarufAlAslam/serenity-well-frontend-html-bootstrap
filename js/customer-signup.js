@@ -26,7 +26,7 @@ customerSignUpForm.addEventListener("submit", (e) => {
 
   //   console.log(customer);
 
-  fetch("https://serinity-well-server.vercel.app/api/v1/addCustomer", {
+  fetch("http://localhost:8000/api/v1/addCustomer", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

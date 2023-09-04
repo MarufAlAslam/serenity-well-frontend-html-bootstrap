@@ -15,7 +15,7 @@ adminLoginForm.addEventListener("submit", (e) => {
 
   console.log(data);
 
-  fetch("https://serinity-well-server.vercel.app/api/v1/adminLogin", {
+  fetch("http://localhost:8000/api/v1/adminLogin", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
