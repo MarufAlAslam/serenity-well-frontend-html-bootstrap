@@ -81,7 +81,7 @@ fetch("http://localhost:8000/api/v1/therapistServices", {
                                     <a href="customer-book.html?id=${item._id}"
                                       class="btn-green block bookbtn w-100 py-2 fs-14 btn w-100"
                                     >
-                                      View Details
+                                      Book Now
                                     </a>
                                   </div>
                                 </div>

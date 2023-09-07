@@ -1,6 +1,7 @@
 const therapistListing = document.querySelector("#therapist-listing");
 const therapist = JSON.parse(localStorage.getItem("activeTherapist"));
 const therapistName = therapist.fullname;
+const therapistID = therapist._id;
 
 const clientsNo = document.querySelector("#clientsNo");
 const totalRevenue = document.querySelector("#totalRevenue");
@@ -17,17 +18,20 @@ fetch(`http://localhost:8000/api/v1/customerBookings`, {
 })
   .then((res) => res.json())
   .then((data) => {
-    // console.log(data);
-    noOfClient = data.length;
-    clientsNo.innerText = noOfClient;
+    console.log(data);
+    // noOfClient = data.length;
+    
     data.forEach((item) => {
-      if (item?.serviceDetails?.therapistName === therapistName) {
+      if (item?.serviceDetails?.serviceData?.therapistID === therapistID) {
+        noOfClient = noOfClient + 1;
+        clientsNo.innerText = noOfClient;
+        console.log(noOfClient);
         revenues += parseInt(item?.serviceDetails?.price);
         totalRevenue.innerText = `R${revenues}`;
         const div = document.createElement("div");
         div.classList.add("col-md-6");
         div.innerHTML = `
-        <div class="card border-0 shadow mb-4">
+        <div class="card border-0 rounded shadow mb-4 ps-4 py-2">
                                             <div class="card-body">
                                                 <div class="row">
                                                     <div class="col-5 bg-green rounded fs-1 text-white fw-bold d-flex justify-content-center align-items-center">
@@ -38,7 +42,7 @@ fetch(`http://localhost:8000/api/v1/customerBookings`, {
                                                           )
                                                           .join("")}
                                                     </div>
-                                                    <div class="col-6 h-100 m-auto border-2 border-green rounded-4 p-4">
+                                                    <div class="col-6 h-100 m-auto border-2 border-green rounded p-4">
                                                         <p class="fw-bold text-center mb-4">
                                                             ${item?.serviceDetails?.service}
                                                         </p>

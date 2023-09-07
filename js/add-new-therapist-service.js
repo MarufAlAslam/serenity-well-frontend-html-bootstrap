@@ -2,6 +2,7 @@ const addServiceForm = document.querySelector("#add-service-form");
 
 const activeTherapist = JSON.parse(localStorage.getItem("activeTherapist"));
 const therapistName = activeTherapist.fullname;
+const therapistID = activeTherapist._id;
 
 addServiceForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -27,6 +28,7 @@ addServiceForm.addEventListener("submit", (e) => {
   const data = {
     serviceName,
     addedBy: therapistName,
+    therapistID,
     price,
     serviceDetails: {
       specialization,
