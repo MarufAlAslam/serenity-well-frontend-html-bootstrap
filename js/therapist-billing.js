@@ -10,7 +10,7 @@ let noOfClient = 0;
 let revenues = 0;
 
 // get all bookings
-fetch(`http://localhost:8000/api/v1/customerBookings`, {
+fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",

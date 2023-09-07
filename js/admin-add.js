@@ -15,7 +15,7 @@ addAdminForm.addEventListener("submit", (e) => {
     roll,
   };
 
-  fetch("http://localhost:8000/api/v1/addAdmin", {
+  fetch("https://serinity-well-server.vercel.app/api/v1/addAdmin", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

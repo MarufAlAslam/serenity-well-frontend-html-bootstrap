@@ -1,7 +1,7 @@
 const services = document.querySelector("#services");
 let flag = 0;
 
-fetch("http://localhost:8000/api/v1/therapistServices", {
+fetch("https://serinity-well-server.vercel.app/api/v1/therapistServices", {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
