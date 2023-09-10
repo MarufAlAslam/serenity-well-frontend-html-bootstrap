@@ -3,7 +3,7 @@ const approved = document.getElementById("approved");
 const applicationTable = document.getElementById("application-table");
 
 // get all bookings
-fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings`, {
+fetch(`http://localhost:8000/api/v1/customerBookings`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",

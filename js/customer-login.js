@@ -22,7 +22,7 @@ customerLoginForm.addEventListener("submit", (e) => {
 
   console.log(data);
 
-  fetch("https://serinity-well-server.vercel.app/api/v1/customerLogin", {
+  fetch("http://localhost:8000/api/v1/customerLogin", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -31,13 +31,12 @@ customerLoginForm.addEventListener("submit", (e) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      if(data){
+      if (data) {
         alert("OTP Sent!");
         // store user data in local storage
         localStorage.setItem("activeUser", JSON.stringify(data));
         window.location.href = "customer-otp.html";
-      }
-      else{
+      } else {
         alert("Invalid Credentials");
       }
     });

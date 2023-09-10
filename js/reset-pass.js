@@ -1,31 +1,30 @@
-const resetPassword = document.querySelector('#resetPassword');
-const reqEmail = JSON.parse(localStorage.getItem('reqEmail'));
+const resetPassword = document.querySelector("#resetPassword");
+const reqEmail = JSON.parse(localStorage.getItem("reqEmail"));
 
-resetPassword.addEventListener('submit', (e) => {
-    e.preventDefault();
+resetPassword.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    const form = e.target;
-    const newPass = form.newPass.value;
+  const form = e.target;
+  const newPass = form.newPass.value;
 
-    const password = {
-        password: newPass
-    }
+  const password = {
+    password: newPass,
+  };
 
-    fetch(`https://serinity-well-server.vercel.app/api/v1/customers/updatePassword/${reqEmail}`, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(password)
-    })
-    .then(res => res.json())
-    .then(data => {
-        if(data){
-            alert("Password Updated Successfully");
-            window.location.href = "customer-login.html";
-        }
-        else{
-            alert("Invalid Credentials");
-        }
-    })
-})
+  fetch(`http://localhost:8000/api/v1/customers/updatePassword/${reqEmail}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(password),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (data) {
+        alert("Password Updated Successfully");
+        window.location.href = "customer-login.html";
+      } else {
+        alert("Invalid Credentials");
+      }
+    });
+});

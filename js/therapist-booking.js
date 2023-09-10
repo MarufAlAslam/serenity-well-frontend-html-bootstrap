@@ -5,7 +5,7 @@ const therapistName = therapist.fullname;
 
 let customerName = "";
 
-fetch("https://serinity-well-server.vercel.app/api/v1/customerBookings", {
+fetch("http://localhost:8000/api/v1/customerBookings", {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
@@ -53,15 +53,9 @@ fetch("https://serinity-well-server.vercel.app/api/v1/customerBookings", {
           <div class="">
               <p class="mb-0">Service</p>
               <p class="fs-11 mb-0">
-                  ${
-                    item?.serviceDetails?.serviceData?.serviceDetails?.nailCare
-                  },
-                  ${
-                    item?.serviceDetails?.serviceData?.serviceDetails?.masage
-                  },
-                  ${
-                    item?.serviceDetails?.serviceData?.serviceDetails?.facials
-                  }
+                  ${item?.serviceDetails?.serviceData?.serviceDetails?.nailCare},
+                  ${item?.serviceDetails?.serviceData?.serviceDetails?.masage},
+                  ${item?.serviceDetails?.serviceData?.serviceDetails?.facials}
               </p>
           </div>
           <div class="bg-green rounded-circle p-0">

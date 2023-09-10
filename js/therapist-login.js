@@ -20,7 +20,7 @@ therapistForm.addEventListener("submit", (e) => {
     password,
   };
 
-  fetch("https://serinity-well-server.vercel.app/api/v1/therapistLogin", {
+  fetch("http://localhost:8000/api/v1/therapistLogin", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -34,8 +34,7 @@ therapistForm.addEventListener("submit", (e) => {
         // store user data in local storage
         localStorage.setItem("activeTherapist", JSON.stringify(data));
         window.location.href = "/therapist-dashboard.html";
-      }
-      else{
+      } else {
         alert("Invalid Credentials");
       }
     });
