@@ -20,7 +20,7 @@ therapistForm.addEventListener("submit", (e) => {
     password,
   };
 
-  fetch("http://localhost:8000/api/v1/therapistLogin", {
+  fetch("https://serinity-well-server.vercel.app/api/v1/therapistLogin", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

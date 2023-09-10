@@ -36,7 +36,7 @@
             <form action="" id="add-service-form">
                 <div class="form-floating mb-3">
                     <select name="serviceName" class="form-control select" id="floatingInput">
-                        <option value=""selected disabled>Select One</option>
+                        <option value="" selected disabled>Select One</option>
                         <option value="Masage">Masage</option>
                         <option value="Nail Care">Nail Care</option>
                         <option value="Facials">Facials</option>
@@ -47,10 +47,13 @@
                 </div>
                 <div class="form-floating mb-3">
                     <select name="specialization" class="form-control select" id="floatingInput">
-                        <option value=""selected disabled>Select One</option>
-                        <option value="750">750</option>
-                        <option value="700">700</option>
-                        <option value="650">650</option>
+                        <option value="" selected disabled>Select One</option>
+                        <option value="Manicure">Manicure</option>
+                        <option value="Pedicure">Pedicure</option>
+                        <option value="Deep Tissue">Deep Tissue</option>
+                        <option value="Aromatherapy">Aromatherapy</option>
+                        <option value="Wax Hair Removal">Wax Hair Removal</option>
+                        <option value="Threading">Threading</option>
                     </select>
                     <!-- <input required type="text" name="specialization" class="form-control select" id="floatingInput"
                         placeholder="name@example.com" /> -->
@@ -59,12 +62,12 @@
                 <div class="form-floating mb-3">
                     <!-- <input required type="text" name="price" class="form-control select" id="floatingInput"
                         placeholder="name@example.com" /> -->
-                        <select name="price" class="form-control select" id="floatingInput">
-                            <option value=""selected disabled>Select One</option>
-                            <option value="750">750</option>
-                            <option value="700">700</option>
-                            <option value="650">650</option>
-                        </select>
+                    <select name="price" class="form-control select" id="floatingInput">
+                        <option value="" selected disabled>Select One</option>
+                        <option value="750">750</option>
+                        <option value="700">700</option>
+                        <option value="650">650</option>
+                    </select>
                     <label class="mb-0" for="floatingInput">Price</label>
                 </div>
 
@@ -171,7 +174,8 @@
                     </div>
                     <div class="col-md-12">
                         <div class="mb-3 d-flex gap-2 align-items-center">
-                            <input required id="lbl2" type="checkbox" name="isAgreed" placeholder="Which class were in ?" />
+                            <input required id="lbl2" type="checkbox" name="isAgreed"
+                                placeholder="Which class were in ?" />
                             <label class="mb-0 mt-1" for="lbl2">Do you Agree to data verification?</label>
                         </div>
                     </div>

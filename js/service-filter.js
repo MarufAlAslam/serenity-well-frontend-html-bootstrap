@@ -1,54 +1,29 @@
-const activeTherapist = JSON.parse(localStorage.getItem("activeTherapist"));
-const avatar = document.querySelector("#avatar");
-
-const therapistID = activeTherapist._id;
-
-const therapistServices = document.querySelector("#services");
-
-console.log(activeTherapist);
-
-if (activeTherapist) {
-  // get fullName from activeUser and display only the first letter of the first 2 words words in avatar as innerText
-  const fullName = activeTherapist.fullname.split(" ").slice(0, 2).join(" ");
-  const firstLetter = fullName
-    .split(" ")
-    .map((word) => word[0])
-    .join("");
-  avatar.innerText = firstLetter;
-}
-
-// log out
-const logoutBtn = document.getElementById("logout");
-
-logoutBtn.addEventListener("click", () => {
-  localStorage.removeItem("activeTherapist");
-  window.location.href = "therapist-login.html";
-});
-
-therapistServices.innerHTML = "";
-
-// get all services by therapist id
-fetch(
-  `https://serinity-well-server.vercel.app/api/v1/therapistServices/therapist/${therapistID}`,
-  {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  }
-)
-  .then((res) => res.json())
-  .then((data) => {
-    if (data) {
-      data.forEach((item) => {
-        const service = document.createElement("div");
-        const fullName = item.addedBy.split(" ").slice(0, 2).join(" ");
-        const firstLetter = fullName
-          .split(" ")
-          .map((word) => word[0])
-          .join("");
-        service.classList.add("col-md-6");
-        service.innerHTML = `
+specializationInput.addEventListener("keyup", (e) => {
+  const value = e.target.value;
+  if (value !== "") {
+    servicesFiltered.innerHTML = "";
+    fetch(
+      `https://serinity-well-server.vercel.app/api/v1/therapistServices/${value}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data) {
+          console.log(data);
+          data.forEach((item) => {
+            const service = document.createElement("div");
+            const fullName = item.addedBy.split(" ").slice(0, 2).join(" ");
+            const firstLetter = fullName
+              .split(" ")
+              .map((word) => word[0])
+              .join("");
+            service.classList.add("col-md-6");
+            service.innerHTML = `
               <div class="col-md-12 p-2">
                             <div class="card p-0 border rounded-2 overflow-hidden">
                               <div class="row">
@@ -110,7 +85,7 @@ fetch(
                                     <a href="customer-book.html?id=${item._id}"
                                       class="btn-green block bookbtn w-100 py-2 fs-14 btn w-100"
                                     >
-                                     View Details
+                                      Book Now
                                     </a>
                                   </div>
                                 </div>
@@ -118,8 +93,10 @@ fetch(
                             </div>
                           </div>
               `;
-        therapistServices.appendChild(service);
-        flag = 1;
+            servicesFiltered.appendChild(service);
+            // flag = 1;
+          });
+        }
       });
-    }
-  });
+  }
+});

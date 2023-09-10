@@ -6,7 +6,7 @@ const usrID = usr._id;
 let itemId = "";
 
 // get all bookings
-fetch(`http://localhost:8000/api/v1/customerBookings`, {
+fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
@@ -29,7 +29,7 @@ fetch(`http://localhost:8000/api/v1/customerBookings`, {
         ${item?.serviceDetails?.address}
     </td>
     <td>
-        R${parseInt(item?.serviceDetails?.price).toFixed(2)}
+        R${parseInt(item?.servicePrice).toFixed(2)}
     </td>
     <td class="">
     <div class="dropdown ms-auto flex justify-conent-end">
@@ -78,12 +78,15 @@ fetch(`http://localhost:8000/api/v1/customerBookings`, {
           deleteBookings[i].addEventListener("click", (e) => {
             itemId = e.target.getAttribute("data-id");
             console.log(itemId);
-            fetch(`http://localhost:8000/api/v1/customerBookings/${itemId}`, {
-              method: "DELETE",
-              headers: {
-                "Content-Type": "application/json",
-              },
-            })
+            fetch(
+              `https://serinity-well-server.vercel.app/api/v1/customerBookings/${itemId}`,
+              {
+                method: "DELETE",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              }
+            )
               .then((res) => res.json())
               .then((data) => {
                 console.log(data);
