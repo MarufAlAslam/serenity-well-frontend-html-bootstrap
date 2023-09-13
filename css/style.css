@@ -443,6 +443,23 @@ input[type="radio"]:checked + label .green-border {
 #filterselect{
   display: none;
 }
+optgroup#Masaage, optgroup#nailCare, optgroup#facials{
+  display: none;
+}
+optgroup { margin: 0; padding: 0; }
+/* Remove Chrome gap */
+:where(optgroup:not([label]) > option)::before {
+	content: "";
+}
+/* Remove Chrome gap */
+:where(optgroup:not([label]) > option)::before {
+	content: "";
+}
+
+/* Remove Firefox gap */
+:where(optgroup:not([label]) > option) {
+	padding-inline-start: 2px;
+}
 @media screen and (max-width: 767px) {
   .dash {
     height: auto;

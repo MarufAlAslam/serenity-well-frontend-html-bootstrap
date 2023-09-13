@@ -33,7 +33,9 @@ therapistSignupForm.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((data) => {
       if (data) {
-        window.location.href = "therapist-confirm.html";
+        console.log(data);
+        localStorage.setItem("therapistID", data.insertedId);
+        window.location.href = "./therapist-form.html";
       }
     });
 });
