@@ -6,7 +6,7 @@ const usrID = usr._id;
 let itemId = "";
 
 // get all bookings
-fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings`, {
+fetch(`http://localhost:8000/api/v1/customerBookings`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
@@ -79,7 +79,7 @@ fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings`, {
             itemId = e.target.getAttribute("data-id");
             console.log(itemId);
             fetch(
-              `https://serinity-well-server.vercel.app/api/v1/customerBookings/${itemId}`,
+              `http://localhost:8000/api/v1/customerBookings/${itemId}`,
               {
                 method: "DELETE",
                 headers: {

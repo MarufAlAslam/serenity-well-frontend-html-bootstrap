@@ -29,7 +29,7 @@ therapistServices.innerHTML = "";
 
 // get all services by therapist id
 fetch(
-  `https://serinity-well-server.vercel.app/api/v1/therapistServices/therapist/${therapistID}`,
+  `http://localhost:8000/api/v1/therapistServices/therapist/${therapistID}`,
   {
     method: "GET",
     headers: {
