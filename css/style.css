@@ -429,6 +429,20 @@ div#serviceDetails span {
 input[type="radio"]:checked + label .green-border {
   border-color: rgb(29, 69, 156) !important;
 }
+
+.filtrbtn.active{
+  border: unset;
+  color: #006688 !important;
+  font-weight: 700;
+}
+.filtrbtn{
+  outline: unset !important;
+  box-shadow: unset !important;
+  border: unset !important;
+}
+#filterselect{
+  display: none;
+}
 @media screen and (max-width: 767px) {
   .dash {
     height: auto;

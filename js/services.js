@@ -67,15 +67,16 @@ fetch("http://localhost:8000/api/v1/therapistServices", {
                                     </span>
       
                                     <p class="fs-12 text-start my-4 ps-3">
-                                      <b>Nail Care:</b> ${
+                                      <b>Nail Care:</b> <span id="nailVal">${
                                         item.serviceDetails.nailCare
-                                      } <br />
-                                      <b>Masaage:</b> ${
+                                      }</span> <br />
+                                      <b>Masaage:</b> <span id="massageVal">${
                                         item.serviceDetails.masage
-                                      } <br />
-                                      <b>Facials:</b> ${
+                                      } </span>
+                                      <br />
+                                      <b>Facials:</b> <span id="facialsVal">${
                                         item.serviceDetails.facials
-                                      }
+                                      }</span>
                                     </p>
       
                                     <a href="customer-book.html?id=${item._id}"
