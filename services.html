@@ -21,42 +21,42 @@
 </head>
 
 <body>
- <!-- navbar -->
- <nav class="navbar navbar-expand-lg bg-white border-bottom">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="img/logo.png" alt="logo" class="img-fluid" />
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav align-items-center gap-4 ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="services.html">Services</a>
-        </li>
-        <!-- <li class="nav-item">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.png" alt="logo" class="img-fluid" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav align-items-center gap-4 ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <!-- <li class="nav-item">
           <a class="nav-link" href="blog.html">Blog</a>
         </li> -->
-       
-        <li class="nav-item">
-          <a class="nav-link login-register-btn px-4" href="customer-login.html">Customer</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link login-register-btn px-4" href="therapist-login.html">Therapist</a>
-        </li>
-      </ul>
+
+          <li class="nav-item">
+            <a class="nav-link login-register-btn px-4" href="customer-login.html">Customer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link login-register-btn px-4" href="therapist-login.html">Therapist</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
-<!-- navbar -->
+  </nav>
+  <!-- navbar -->
 
   <!-- secondary nav -->
   <section class="secondary-nav py-4">
@@ -64,28 +64,16 @@
       <div class="row g-4 mb-4">
         <div class="col-md-6">
           <div class="d-flex justify-content-start gap-5">
-            <button
-              id="allServices"
-              class="btn active filtrbtn text-dark font-bold text-decoration-none"
-            >
+            <button id="allServices" class="btn active filtrbtn text-dark font-bold text-decoration-none">
               All
             </button>
-            <button
-              id="massage"
-              class="btn filtrbtn font-bold text-decoration-none"
-            >
+            <button id="massage" class="btn filtrbtn font-bold text-decoration-none">
               Massage
             </button>
-            <button
-              id="nails"
-              class="btn filtrbtn text-dark font-bold text-decoration-none"
-            >
+            <button id="nails" class="btn filtrbtn text-dark font-bold text-decoration-none">
               Nails
             </button>
-            <button
-              id="facials"
-              class="btn filtrbtn text-dark font-bold text-decoration-none"
-            >
+            <button id="facials" class="btn filtrbtn text-dark font-bold text-decoration-none">
               Facials
             </button>
           </div>
@@ -93,11 +81,7 @@
       </div>
 
       <form action="">
-        <select
-          name=""
-          id="filterselect"
-          class="form-select"
-        ></select>
+        <select name="" id="filterselect" class="form-select"></select>
       </form>
     </div>
   </section>
@@ -260,7 +244,7 @@
       $("#allServices").click(function () {
         $("#filterselect").hide();
         $("#services").html("");
-        fetch(`http://localhost:8000/api/v1/therapistServices`, {
+        fetch(`https://serinity-well-server.vercel.app/api/v1/therapistServices`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -302,11 +286,10 @@
                                   Accreditation:
                                   <span class="fs-10 d-block"
                                     >
-                                    ${
-                                      item.qualifications.isMember
-                                        ? "Member of the Therapist Board"
-                                        : "Not a Member of the Therapist Board"
-                                    }
+                                    ${item.qualifications.isMember
+                    ? "Member of the Therapist Board"
+                    : "Not a Member of the Therapist Board"
+                  }
                                     </span
                                   >
                                 </p>
@@ -329,16 +312,13 @@
                                   </span>
     
                                   <p class="fs-12 text-start my-4 ps-3">
-                                    <b>Nail Care:</b> <span id="nailVal">${
-                                      item.serviceDetails.nailCare
-                                    }</span> <br />
-                                    <b>Masaage:</b> <span id="massageVal">${
-                                      item.serviceDetails.masage
-                                    } </span>
+                                    <b>Nail Care:</b> <span id="nailVal">${item.serviceDetails.nailCare
+                  }</span> <br />
+                                    <b>Masaage:</b> <span id="massageVal">${item.serviceDetails.masage
+                  } </span>
                                     <br />
-                                    <b>Facials:</b> <span id="facialsVal">${
-                                      item.serviceDetails.facials
-                                    }</span>
+                                    <b>Facials:</b> <span id="facialsVal">${item.serviceDetails.facials
+                  }</span>
                                   </p>
     
                                   <a href="customer-book.html?id=${item._id}"
@@ -387,7 +367,7 @@
           console.log(selected);
 
           fetch(
-            `http://localhost:8000/api/v1/therapistServices/massage/${selected}`,
+            `https://serinity-well-server.vercel.app/api/v1/therapistServices/massage/${selected}`,
             {
               method: "GET",
               headers: {
@@ -431,11 +411,10 @@
                                   Accreditation:
                                   <span class="fs-10 d-block"
                                     >
-                                    ${
-                                      item.qualifications.isMember
-                                        ? "Member of the Therapist Board"
-                                        : "Not a Member of the Therapist Board"
-                                    }
+                                    ${item.qualifications.isMember
+                      ? "Member of the Therapist Board"
+                      : "Not a Member of the Therapist Board"
+                    }
                                     </span
                                   >
                                 </p>
@@ -458,16 +437,13 @@
                                   </span>
     
                                   <p class="fs-12 text-start my-4 ps-3">
-                                    <b>Nail Care:</b> <span id="nailVal">${
-                                      item.serviceDetails.nailCare
-                                    }</span> <br />
-                                    <b>Masaage:</b> <span id="massageVal">${
-                                      item.serviceDetails.masage
-                                    } </span>
+                                    <b>Nail Care:</b> <span id="nailVal">${item.serviceDetails.nailCare
+                    }</span> <br />
+                                    <b>Masaage:</b> <span id="massageVal">${item.serviceDetails.masage
+                    } </span>
                                     <br />
-                                    <b>Facials:</b> <span id="facialsVal">${
-                                      item.serviceDetails.facials
-                                    }</span>
+                                    <b>Facials:</b> <span id="facialsVal">${item.serviceDetails.facials
+                    }</span>
                                   </p>
     
                                   <a href="customer-book.html?id=${item._id}"
@@ -517,7 +493,7 @@
           console.log(selected);
 
           fetch(
-            `http://localhost:8000/api/v1/therapistServices/nails/${selected}`,
+            `https://serinity-well-server.vercel.app/api/v1/therapistServices/nails/${selected}`,
             {
               method: "GET",
               headers: {
@@ -561,11 +537,10 @@
                                   Accreditation:
                                   <span class="fs-10 d-block"
                                     >
-                                    ${
-                                      item.qualifications.isMember
-                                        ? "Member of the Therapist Board"
-                                        : "Not a Member of the Therapist Board"
-                                    }
+                                    ${item.qualifications.isMember
+                      ? "Member of the Therapist Board"
+                      : "Not a Member of the Therapist Board"
+                    }
                                     </span
                                   >
                                 </p>
@@ -588,16 +563,13 @@
                                   </span>
     
                                   <p class="fs-12 text-start my-4 ps-3">
-                                    <b>Nail Care:</b> <span id="nailVal">${
-                                      item.serviceDetails.nailCare
-                                    }</span> <br />
-                                    <b>Masaage:</b> <span id="massageVal">${
-                                      item.serviceDetails.masage
-                                    } </span>
+                                    <b>Nail Care:</b> <span id="nailVal">${item.serviceDetails.nailCare
+                    }</span> <br />
+                                    <b>Masaage:</b> <span id="massageVal">${item.serviceDetails.masage
+                    } </span>
                                     <br />
-                                    <b>Facials:</b> <span id="facialsVal">${
-                                      item.serviceDetails.facials
-                                    }</span>
+                                    <b>Facials:</b> <span id="facialsVal">${item.serviceDetails.facials
+                    }</span>
                                   </p>
     
                                   <a href="customer-book.html?id=${item._id}"
@@ -648,7 +620,7 @@
         console.log(selected);
 
         fetch(
-          `http://localhost:8000/api/v1/therapistServices/facials/${selected}`,
+          `https://serinity-well-server.vercel.app/api/v1/therapistServices/facials/${selected}`,
           {
             method: "GET",
             headers: {
@@ -692,11 +664,10 @@
                                   Accreditation:
                                   <span class="fs-10 d-block"
                                     >
-                                    ${
-                                      item.qualifications.isMember
-                                        ? "Member of the Therapist Board"
-                                        : "Not a Member of the Therapist Board"
-                                    }
+                                    ${item.qualifications.isMember
+                    ? "Member of the Therapist Board"
+                    : "Not a Member of the Therapist Board"
+                  }
                                     </span
                                   >
                                 </p>
@@ -719,16 +690,13 @@
                                   </span>
     
                                   <p class="fs-12 text-start my-4 ps-3">
-                                    <b>Nail Care:</b> <span id="nailVal">${
-                                      item.serviceDetails.nailCare
-                                    }</span> <br />
-                                    <b>Masaage:</b> <span id="massageVal">${
-                                      item.serviceDetails.masage
-                                    } </span>
+                                    <b>Nail Care:</b> <span id="nailVal">${item.serviceDetails.nailCare
+                  }</span> <br />
+                                    <b>Masaage:</b> <span id="massageVal">${item.serviceDetails.masage
+                  } </span>
                                     <br />
-                                    <b>Facials:</b> <span id="facialsVal">${
-                                      item.serviceDetails.facials
-                                    }</span>
+                                    <b>Facials:</b> <span id="facialsVal">${item.serviceDetails.facials
+                  }</span>
                                   </p>
     
                                   <a href="customer-book.html?id=${item._id}"

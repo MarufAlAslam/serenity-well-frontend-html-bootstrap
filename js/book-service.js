@@ -17,12 +17,15 @@ if (urlParams.has("id")) {
 }
 console.log(id);
 
-fetch(`http://localhost:8000/api/v1/therapistServices/${id}`, {
-  method: "GET",
-  headers: {
-    "Content-Type": "application/json",
-  },
-})
+fetch(
+  `https://serinity-well-server.vercel.app/api/v1/therapistServices/${id}`,
+  {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }
+)
   .then((res) => res.json())
   .then((data) => {
     serviceName.innerHTML = data.serviceName;
