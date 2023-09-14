@@ -307,7 +307,7 @@
         $("#allServices").click(function () {
           $("#filterselect").hide();
           $("#services").html("");
-          fetch(`https://serinity-well-server.vercel.app/api/v1/therapistServices`, {
+          fetch(`http://localhost:8000/api/v1/therapistServices`, {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
@@ -434,7 +434,7 @@
             console.log(selected);
 
             fetch(
-              `https://serinity-well-server.vercel.app/api/v1/therapistServices/massage/${selected}`,
+              `http://localhost:8000/api/v1/therapistServices/massage/${selected}`,
               {
                 method: "GET",
                 headers: {
@@ -564,7 +564,7 @@
             console.log(selected);
 
             fetch(
-              `https://serinity-well-server.vercel.app/api/v1/therapistServices/nails/${selected}`,
+              `http://localhost:8000/api/v1/therapistServices/nails/${selected}`,
               {
                 method: "GET",
                 headers: {
@@ -695,7 +695,7 @@
           console.log(selected);
 
           fetch(
-            `https://serinity-well-server.vercel.app/api/v1/therapistServices/facials/${selected}`,
+            `http://localhost:8000/api/v1/therapistServices/facials/${selected}`,
             {
               method: "GET",
               headers: {

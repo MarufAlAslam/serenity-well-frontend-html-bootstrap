@@ -9,7 +9,7 @@ const userr = JSON.parse(localStorage.getItem("activeUser"));
 
 const userrID = userr._id;
 
-fetch("https://serinity-well-server.vercel.app/api/v1/therapistServices", {
+fetch("http://localhost:8000/api/v1/therapistServices", {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
@@ -31,15 +31,12 @@ fetch("https://serinity-well-server.vercel.app/api/v1/therapistServices", {
 
 serviceSelect.addEventListener("change", (e) => {
   // get service by id
-  fetch(
-    `https://serinity-well-server.vercel.app/api/v1/therapistServices/service/${id}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  )
+  fetch(`http://localhost:8000/api/v1/therapistServices/service/${id}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
@@ -73,7 +70,7 @@ initiateBookingForm.addEventListener("submit", (e) => {
     isHotel,
   };
 
-  fetch(`https://serinity-well-server.vercel.app/api/v1/addCustomerBooking`, {
+  fetch(`http://localhost:8000/api/v1/addCustomerBooking`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
