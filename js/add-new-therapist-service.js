@@ -9,12 +9,13 @@ addServiceForm.addEventListener("submit", (e) => {
 
   const form = e.target;
 
-  const serviceName = form.serviceName.value;
+  // const serviceName = form.serviceName.value;
   const specialization = form.specialization.value;
+  const subSpecialization = form.subSpecialization.value;
   const price = form.price.value;
-  const nailCare = form.nail.value;
-  const masage = form.masage.value;
-  const facials = form.facials.value;
+  // const nailCare = form.nail.value;
+  // const masage = form.masage.value;
+  // const facials = form.facials.value;
 
   // qualifications details
   const serenityClass = form.serenityClass.value;
@@ -26,15 +27,13 @@ addServiceForm.addEventListener("submit", (e) => {
   const isAgreed = form.isAgreed.checked;
 
   const data = {
-    serviceName,
+    // serviceName,
     addedBy: therapistName,
     therapistID,
     price,
     serviceDetails: {
       specialization,
-      nailCare,
-      masage,
-      facials,
+      subSpecialization,
     },
     qualifications: {
       serenityClass,

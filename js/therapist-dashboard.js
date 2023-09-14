@@ -92,16 +92,23 @@ fetch(`http://localhost:8000/api/v1/therapistServices`, {
                                       Services:
                                     </span>
       
-                                    <p class="fs-12 text-start my-4 ps-3">
-                                      <b>Nail Care:</b> ${
-                                        item.serviceDetails.nailCare
-                                      } <br />
-                                      <b>Masaage:</b> ${
-                                        item.serviceDetails.masage
-                                      } <br />
-                                      <b>Facials:</b> ${
-                                        item.serviceDetails.facials
+                                     <p class="fs-12 text-start my-4 ps-3">
+                                      <b>Specialization:</b> ${
+                                        item.serviceDetails.specialization ===
+                                        undefined
+                                          ? item.serviceDetails.specialization
+                                          : item.serviceDetails.specialization
                                       }
+                                        </span>
+                                        <br />
+                                      <b>Sub-Specialization:</b> ${
+                                        item.serviceDetails
+                                          .subSpecialization === undefined
+                                          ? "Unavailable"
+                                          : item.serviceDetails
+                                              .subSpecialization
+                                      }
+                                        </span>
                                     </p>
       
                                     <a href="customer-book.html?id=${item._id}"

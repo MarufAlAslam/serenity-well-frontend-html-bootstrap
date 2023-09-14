@@ -34,31 +34,35 @@
             <p>You can add multiple service that you offer below</p>
 
             <form action="" id="add-service-form">
-                <div class="form-floating mb-3">
-                    <select name="serviceName" class="form-control select" id="floatingInput">
+                <div class="form-group mb-3">
+                    <label class="mb-0" for="floatingInput">Specialization</label>
+                    <select name="specialization" class="form-select mt-3" id="specialization">
                         <option value="" selected disabled>Select One</option>
-                        <option value="Masage">Masage</option>
+                        <option value="Massage">Massage</option>
                         <option value="Nail Care">Nail Care</option>
                         <option value="Facials">Facials</option>
                     </select>
-                    <!-- <input required type="text" name="serviceName" class="form-control select" id="floatingInput"
-                        placeholder="name@example.com" /> -->
-                    <label class="mb-0" for="floatingInput">Service Name</label>
                 </div>
-                <div class="form-floating mb-3">
-                    <select name="specialization" class="form-control select" id="floatingInput">
+
+                <div class="form-group mb-3">
+                    <label class="mb-0" for="floatingInput">Select Specifically</label>
+                    <select name="subSpecialization" class="form-select mt-3" id="sub-specialization">
                         <option value="" selected disabled>Select One</option>
-                        <option value="Manicure">Manicure</option>
-                        <option value="Pedicure">Pedicure</option>
-                        <option value="Deep Tissue">Deep Tissue</option>
-                        <option value="Aromatherapy">Aromatherapy</option>
-                        <option value="Wax Hair Removal">Wax Hair Removal</option>
-                        <option value="Threading">Threading</option>
+                        <optgroup id="Masaage" title="hello">
+                            <option value="Deep Tissue">Deep Tissue</option>
+                            <option value="Aromatherapy">Aromatherapy</option>
+                        </optgroup>
+                        <optgroup id="nailCare">
+                            <option value="Manicure">Manicure</option>
+                            <option value="Pedicure">Pedicure</option>
+                        </optgroup>
+                        <optgroup id="facials">
+                            <option value="Wax Hair Removal">Wax Hair Removal</option>
+                            <option value="Threading">Threading</option>
+                        </optgroup>
                     </select>
-                    <!-- <input required type="text" name="specialization" class="form-control select" id="floatingInput"
-                        placeholder="name@example.com" /> -->
-                    <label class="mb-0" for="floatingInput">Specialization</label>
                 </div>
+
                 <div class="form-floating mb-3">
                     <!-- <input required type="text" name="price" class="form-control select" id="floatingInput"
                         placeholder="name@example.com" /> -->
@@ -71,11 +75,11 @@
                     <label class="mb-0" for="floatingInput">Price</label>
                 </div>
 
-                <div class="form-title">
+                <!-- <div class="form-title">
                     Nail Care
-                </div>
+                </div> -->
 
-                <div class="mt-3">
+                <!-- <div class="mt-3">
                     <div class="d-flex align-items-center gap-3 mb-2">
                         <input required type="radio" name="nail" value="Manicure" id="n1">
                         <label for="n1">
@@ -88,12 +92,12 @@
                             Pedicure
                         </label>
                     </div>
-                </div>
-                <div class="form-title mt-4">
+                </div> -->
+                <!-- <div class="form-title mt-4">
                     Massage
-                </div>
+                </div> -->
 
-                <div class="mt-3">
+                <!-- <div class="mt-3">
                     <div class="d-flex align-items-center gap-3 mb-2">
                         <input required type="radio" name="masage" value="Deep Tissue" id="m1">
                         <label for="m1">
@@ -106,13 +110,13 @@
                             Aromatherapy
                         </label>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="form-title mt-4">
+                <!-- <div class="form-title mt-4">
                     Facials
-                </div>
+                </div> -->
 
-                <div class="mt-3">
+                <!-- <div class="mt-3">
                     <div class="d-flex align-items-center gap-3 mb-2">
                         <input required type="radio" name="facials" value="Wax Hair Removal" id="f1">
                         <label for="f1">
@@ -125,7 +129,7 @@
                             Threading
                         </label>
                     </div>
-                </div>
+                </div> -->
 
                 <h5 class="mt-5">Qualifications Details:</h5>
                 <p>Please capture all required information below.</p>
@@ -202,6 +206,91 @@
     <script src="js/app.js"></script>
 
     <script src="js/add-new-therapist-service.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#specialization').change(function () {
+                var selected = $(this).children("option:selected").val();
+                if (selected == 'Massage') {
+                    $('optgroup#Masaage').show();
+                    $('optgroup#nailCare').hide();
+                    $('optgroup#facials').hide();
+                } else if (selected == 'Nail Care') {
+                    $('optgroup#Masaage').hide();
+                    $('optgroup#nailCare').show();
+                    $('#facials').hide();
+                } else if (selected == 'Facials') {
+                    $('optgroup#Masaage').hide();
+                    $('optgroup#nailCare').hide();
+                    $('optgroup#facials').show();
+                }
+            })
+        })
+
+        const therapistProfileForm = document.getElementById('add-service-form');
+
+        therapistProfileForm.addEventListener("submit", function (e) {
+            e.preventDefault()
+            console.log(e)
+
+            const form = e.target;
+
+            const fullName = form.fullName.value;
+            const email = form.email.value;
+            const phone = form.phone.value;
+            const area = form.area.value;
+
+            const specialization = form.specialization.value;
+            const subSpecialization = form['sub-specialization'].value;
+            const uniCollage = form['uni-collage'].value;
+            const certificationType = form['certification-type'].value;
+            const graduationYear = form['graduation-year'].value;
+            const experienceYear = form['experience-year'].value;
+
+            const isMember = form.isMember.checked;
+            const captureTherapBoard = form['capture-therap-board'].value;
+            const isAgreed = form.isAgreed.checked;
+
+
+            const data = {
+                personalDetails: {
+                    fullName,
+                    email,
+                    phone,
+                    area
+                },
+                serviceDetails: {
+                    specialization,
+                    subSpecialization
+                },
+                qualificationsDetails: {
+                    uniCollage,
+                    certificationType,
+                    graduationYear,
+                    experienceYear
+                },
+            }
+
+            const therapistID = localStorage.getItem('therapistID');
+
+            fetch(`http://localhost:8000/api/v1/therapists/${therapistID}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data) {
+                        localStorage.removeItem('therapistID')
+                        alert('Profile Updated Successfully')
+                        window.location.href = 'therapist-confirm.html'
+                    }
+                })
+        })
+    </script>
 </body>
 
 </html>

@@ -67,19 +67,27 @@ fetch("http://localhost:8000/api/v1/therapistServices", {
                                     </span>
       
                                     <p class="fs-12 text-start my-4 ps-3">
-                                      <b>Nail Care:</b> <span id="nailVal">${
-                                        item.serviceDetails.nailCare
-                                      }</span> <br />
-                                      <b>Masaage:</b> <span id="massageVal">${
-                                        item.serviceDetails.masage
-                                      } </span>
-                                      <br />
-                                      <b>Facials:</b> <span id="facialsVal">${
-                                        item.serviceDetails.facials
-                                      }</span>
+                                      <b>Specialization:</b> ${
+                                        item.serviceDetails.specialization ===
+                                        undefined
+                                          ? item.serviceDetails.specialization
+                                          : item.serviceDetails.specialization
+                                      }
+                                        </span>
+                                        <br />
+                                      <b>Sub-Specialization:</b> ${
+                                        item.serviceDetails
+                                          .subSpecialization === undefined
+                                          ? "Unavailable"
+                                          : item.serviceDetails
+                                              .subSpecialization
+                                      }
+                                        </span>
                                     </p>
       
-                                    <a href="customer-book.html?id=${item._id}"
+                                    <a href="customer-booking-details.html?id=${
+                                      item._id
+                                    }"
                                       class="btn-green block bookbtn w-100 py-2 fs-14 btn w-100"
                                     >
                                       Book Now
