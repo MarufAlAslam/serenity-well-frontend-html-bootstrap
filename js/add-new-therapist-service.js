@@ -48,7 +48,7 @@ addServiceForm.addEventListener("submit", (e) => {
 
   console.log(data);
 
-  fetch("http://localhost:8000/api/v1/addTherapistService", {
+  fetch("https://serinity-well-server.vercel.app/api/v1/addTherapistService", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
