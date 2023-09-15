@@ -2,15 +2,12 @@ specializationInput.addEventListener("keyup", (e) => {
   const value = e.target.value;
   if (value !== "") {
     servicesFiltered.innerHTML = "";
-    fetch(
-      `https://serinity-well-server.vercel.app/api/v1/therapistServices/${value}`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
+    fetch(`http://localhost:8000/api/v1/therapistServices/${value}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data) {

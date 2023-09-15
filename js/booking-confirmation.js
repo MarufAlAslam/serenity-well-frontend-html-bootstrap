@@ -4,15 +4,12 @@ const bookingID = localStorage.getItem("bookingID");
 
 // console.log(bookingID);
 
-fetch(
-  `https://serinity-well-server.vercel.app/api/v1/customerBookings/${bookingID}`,
-  {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  }
-)
+fetch(`http://localhost:8000/api/v1/customerBookings/${bookingID}`, {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+  },
+})
   .then((res) => res.json())
   .then((data) => {
     confirmCard.innerHTML = `

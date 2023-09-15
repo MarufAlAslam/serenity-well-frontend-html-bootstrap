@@ -1,378 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Serenity Well</title>
 
-    <!-- bootstrap cdn -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serenity Well</title>
 
-    <!-- fontawesome cdn -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+  <!-- bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- google fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-    <!-- style css -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
-  <body>
-    <div class="dash">
-      <!-- topbar -->
-      <section class="topbar py-2 bg-white">
-        <div class="container-fluid px-3">
-          <div class="d-flex justify-content-between align-items-center">
-            <a href="">
-              <img src="img/dashboard-logo.png" class="img-fluid" alt="" />
-            </a>
-            <a href="" class="avatar" id="avatar"> BB </a>
-          </div>
+  <!-- style css -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="dash">
+    <!-- topbar -->
+    <section class="topbar py-2 bg-white">
+      <div class="container-fluid px-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="">
+            <img src="img/dashboard-logo.png" class="img-fluid" alt="" />
+          </a>
+          <a href="" class="avatar" id="avatar"> BB </a>
         </div>
-      </section>
-      <!-- topbar -->
+      </div>
+    </section>
+    <!-- topbar -->
 
-      <!-- panel -->
-      <section class="panel py-2">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-2 sidebar">
-              <ul class="list-unstyled m-0 p-0">
-                <li>
-                  <a
-                    href="customer-dashboard.html"
-                    class="menu-item text-decoration-none"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="customer-booking.html"
-                    class="active menu-item text-decoration-none"
-                  >
-                    Bookings
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="menu-item text-decoration-none">
-                    Reviews & Rating
-                  </a>
-                </li>
-                <li>
+    <!-- panel -->
+    <section class="panel py-2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2 sidebar">
+            <ul class="list-unstyled m-0 p-0">
+              <li>
+                <a href="customer-dashboard.html" class="menu-item text-decoration-none">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="customer-booking.html" class="active menu-item text-decoration-none">
+                  Bookings
+                </a>
+              </li>
+              <li>
+                <a href="" class="menu-item text-decoration-none">
+                  Reviews & Rating
+                </a>
+              </li>
+              <!-- <li>
                   <a href="" class="menu-item text-decoration-none">
                     Billing
                   </a>
-                </li>
-                <li>
-                  <button
-                    href="customer-login.html"
-                    class="menu-item text-decoration-none btn"
-                    id="logout"
-                  >
-                    Sign Out
-                  </button>
-                </li>
-              </ul>
+                </li> -->
+              <li>
+                <button href="customer-login.html" class="menu-item text-decoration-none btn" id="logout">
+                  Sign Out
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-10 main p-5">
+            <h2 class="fs-25 text-black fw-normal">
+              <a href="customer-dashboard.html" class="text-black text-decoration-none">
+                <i class="fa fa-arrow-left me-2"></i>
+              </a>
+              Book Appointment
+            </h2>
+
+            <div class="tab my-5 bg-white shadow-sm p-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="customer-booking-details.html" class="tab-link lead">
+                  Details
+                </a>
+                <a href="customer-booking-extra.html" class="tab-link lead">
+                  Extra information
+                </a>
+                <a href="customer-booking-pricing.html" class="tab-link active lead">
+                  Pricing
+                </a>
+                <a href="customer-booking-confirmation.html" class="tab-link lead">
+                  Confirmation
+                </a>
+                <a href="customer-booking-payment.html" class="tab-link lead">
+                  Payment
+                </a>
+              </div>
             </div>
 
-            <div class="col-md-10 main p-5">
-              <h2 class="fs-25 text-black fw-normal">
-                <a
-                  href="customer-dashboard.html"
-                  class="text-black text-decoration-none"
-                >
-                  <i class="fa fa-arrow-left me-2"></i>
-                </a>
-                Book Appointment
-              </h2>
+            <div class="col-md-10 mx-auto">
+              <div class="card bg-white border-0">
+                <div class="card-body">
+                  <h2 class="fs-24">Pricing</h2>
+                  <p class="fs-14">pricing for your booking</p>
 
-              <div class="tab my-5 bg-white shadow-sm p-4">
-                <div class="d-flex justify-content-between align-items-center">
-                  <a href="customer-booking-details.html" class="tab-link lead">
-                    Details
-                  </a>
-                  <a href="customer-booking-extra.html" class="tab-link lead">
-                    Extra information
-                  </a>
-                  <a
-                    href="customer-booking-pricing.html"
-                    class="tab-link active lead"
-                  >
-                    Pricing
-                  </a>
-                  <a
-                    href="customer-booking-confirmation.html"
-                    class="tab-link lead"
-                  >
-                    Confirmation
-                  </a>
-                  <a href="customer-booking-payment.html" class="tab-link lead">
-                    Payment
-                  </a>
-                </div>
-              </div>
+                  <hr class="my-4" />
 
-              <div class="col-md-10 mx-auto">
-                <div class="card bg-white border-0">
-                  <div class="card-body">
-                    <h2 class="fs-24">Pricing</h2>
-                    <p class="fs-14">pricing for your booking</p>
+                  <form action="" id="pricingForm" class="row g-4 mb-5">
+                    <div class="col-md-4">
+                      <input type="radio" name="servicePrice" value="750" id="price1" />
+                      <label for="price1" class="d-block h-100">
+                        <div class="card h-100 green-border position-relative">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <h3 class="mb-4 fs-20 fw-bold">
+                                BASIC: PAY AS YOU GO
+                              </h3>
+                              <hr />
 
-                    <hr class="my-4" />
+                              <div class="d-flex gap-1 justify-content-center align-items-start">
+                                R
+                                <h1 class="d-inline muted fw-bold price">
+                                  750
+                                </h1>
+                              </div>
 
-                    <form action="" id="pricingForm" class="row g-4 mb-5">
-                      <div class="col-md-4">
-                        <input type="radio" name="servicePrice" value="750" id="price1" />
-                        <label for="price1" class="d-block h-100">
-                          <div
-                            class="card h-100 green-border position-relative"
-                          >
-                            <div class="card-body">
-                              <div class="text-center">
-                                <h3 class="mb-4 fs-20 fw-bold">
-                                  BASIC: PAY AS YOU GO
-                                </h3>
-                                <hr />
+                              <svg width="113" height="9" viewBox="0 0 113 9" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.2" filter="url(#filter0_d_111_6772)">
+                                  <line x1="4" y1="0.5" x2="109" y2="0.5" stroke="black" />
+                                </g>
+                                <defs>
+                                  <filter id="filter0_d_111_6772" x="0" y="0" width="113" height="9"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="4" />
+                                    <feGaussianBlur stdDeviation="2" />
+                                    <feComposite in2="hardAlpha" operator="out" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                      result="effect1_dropShadow_111_6772" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_111_6772"
+                                      result="shape" />
+                                  </filter>
+                                </defs>
+                              </svg>
 
-                                <div
-                                  class="d-flex gap-1 justify-content-center align-items-start"
-                                >
-                                  R
-                                  <h1 class="d-inline muted fw-bold price">
-                                    750
-                                  </h1>
-                                </div>
+                              <p class="my-80">
+                                Add-on R200 per additional 30 mins <br />
 
-                                <svg
-                                  width="113"
-                                  height="9"
-                                  viewBox="0 0 113 9"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <g
-                                    opacity="0.2"
-                                    filter="url(#filter0_d_111_6772)"
-                                  >
-                                    <line
-                                      x1="4"
-                                      y1="0.5"
-                                      x2="109"
-                                      y2="0.5"
-                                      stroke="black"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <filter
-                                      id="filter0_d_111_6772"
-                                      x="0"
-                                      y="0"
-                                      width="113"
-                                      height="9"
-                                      filterUnits="userSpaceOnUse"
-                                      color-interpolation-filters="sRGB"
-                                    >
-                                      <feFlood
-                                        flood-opacity="0"
-                                        result="BackgroundImageFix"
-                                      />
-                                      <feColorMatrix
-                                        in="SourceAlpha"
-                                        type="matrix"
-                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                        result="hardAlpha"
-                                      />
-                                      <feOffset dy="4" />
-                                      <feGaussianBlur stdDeviation="2" />
-                                      <feComposite
-                                        in2="hardAlpha"
-                                        operator="out"
-                                      />
-                                      <feColorMatrix
-                                        type="matrix"
-                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                                      />
-                                      <feBlend
-                                        mode="normal"
-                                        in2="BackgroundImageFix"
-                                        result="effect1_dropShadow_111_6772"
-                                      />
-                                      <feBlend
-                                        mode="normal"
-                                        in="SourceGraphic"
-                                        in2="effect1_dropShadow_111_6772"
-                                        result="shape"
-                                      />
-                                    </filter>
-                                  </defs>
-                                </svg>
+                                *90 mins = R950 <br />
 
-                                <p class="my-80">
-                                  Add-on R200 per additional 30 mins <br />
+                                *120 mins = R1150
+                              </p>
 
-                                  *90 mins = R950 <br />
-
-                                  *120 mins = R1150
-                                </p>
-
-                                <!-- <button class="btn btn-green px-5 py-3 text-white">
+                              <!-- <button class="btn btn-green px-5 py-3 text-white">
                                                       Select
                                                     </button> -->
-                              </div>
                             </div>
                           </div>
-                        </label>
-                      </div>
-                      
-                      <div class="col-md-4">
-                        <input type="radio" name="servicePrice" value="700" id="price2" />
-                        <label for="price2" class="d-block h-100">
-                            <div class="card h-100 green-border position-relative">
-                                <img src="img/bell.png" class="position-absolute top-0 left-0 bell" alt="" />
-                                <div class="card-body">
-                                  <div class="text-center">
-                                    <h3 class="fs-20 fw-bold">MEMBER</h3>
-                                    <p>MOST POPULAR</p>
-                                    <hr />
-                  
-                                    <div class="d-flex gap-1 justify-content-center align-items-start">
-                                      R
-                                      <h1 class="d-inline muted fw-bold price">700</h1>
-                                    </div>
-                  
-                                    <svg width="113" height="9" viewBox="0 0 113 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <g opacity="0.2" filter="url(#filter0_d_111_6772)">
-                                        <line x1="4" y1="0.5" x2="109" y2="0.5" stroke="black" />
-                                      </g>
-                                      <defs>
-                                        <filter id="filter0_d_111_6772" x="0" y="0" width="113" height="9" filterUnits="userSpaceOnUse"
-                                          color-interpolation-filters="sRGB">
-                                          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                            result="hardAlpha" />
-                                          <feOffset dy="4" />
-                                          <feGaussianBlur stdDeviation="2" />
-                                          <feComposite in2="hardAlpha" operator="out" />
-                                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_111_6772" />
-                                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_111_6772" result="shape" />
-                                        </filter>
-                                      </defs>
-                                    </svg>
-                  
-                                    <p class="my-80">
-                                      3-month minimum commitment <br />
-                  
-                                      R 50 discount on each treatment <br />
-                  
-                                      Add-on R 200 per additional 30 minutes <br />
-                  
-                                      *90 mins = R900 <br />
-                  
-                                      *120 mins = R1100
-                                    </p>
-                  <!-- 
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="col-md-4">
+                      <input type="radio" name="servicePrice" value="700" id="price2" />
+                      <label for="price2" class="d-block h-100">
+                        <div class="card h-100 green-border position-relative">
+                          <img src="img/bell.png" class="position-absolute top-0 left-0 bell" alt="" />
+                          <div class="card-body">
+                            <div class="text-center">
+                              <h3 class="fs-20 fw-bold">MEMBER</h3>
+                              <p>MOST POPULAR</p>
+                              <hr />
+
+                              <div class="d-flex gap-1 justify-content-center align-items-start">
+                                R
+                                <h1 class="d-inline muted fw-bold price">700</h1>
+                              </div>
+
+                              <svg width="113" height="9" viewBox="0 0 113 9" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.2" filter="url(#filter0_d_111_6772)">
+                                  <line x1="4" y1="0.5" x2="109" y2="0.5" stroke="black" />
+                                </g>
+                                <defs>
+                                  <filter id="filter0_d_111_6772" x="0" y="0" width="113" height="9"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="4" />
+                                    <feGaussianBlur stdDeviation="2" />
+                                    <feComposite in2="hardAlpha" operator="out" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                      result="effect1_dropShadow_111_6772" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_111_6772"
+                                      result="shape" />
+                                  </filter>
+                                </defs>
+                              </svg>
+
+                              <p class="my-80">
+                                3-month minimum commitment <br />
+
+                                R 50 discount on each treatment <br />
+
+                                Add-on R 200 per additional 30 minutes <br />
+
+                                *90 mins = R900 <br />
+
+                                *120 mins = R1100
+                              </p>
+                              <!-- 
                                     <button class="btn btn-green px-5 py-3 text-white">
                                       Select
                                     </button> -->
-                                  </div>
-                                </div>
-                              </div>
-                        </label>
-                      </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
 
-                      <div class="col-md-4">
-                        <input type="radio" name="servicePrice" value="650" id="price3" />
-                        <label for="price3" class="d-block h-100">
-                            <div class="card h-100 green-border position-relative">
-                                <div class="card-body">
-                                  <div class="text-center">
-                                    <h3 class="mb-4 fs-20 fw-bold">PREMIUM MEMBER</h3>
-                                    <hr />
-                  
-                                    <div class="d-flex gap-1 justify-content-center align-items-start">
-                                      R
-                                      <h1 class="d-inline muted fw-bold price">650</h1>
-                                    </div>
-                  
-                                    <svg width="113" height="9" viewBox="0 0 113 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <g opacity="0.2" filter="url(#filter0_d_111_6772)">
-                                        <line x1="4" y1="0.5" x2="109" y2="0.5" stroke="black" />
-                                      </g>
-                                      <defs>
-                                        <filter id="filter0_d_111_6772" x="0" y="0" width="113" height="9" filterUnits="userSpaceOnUse"
-                                          color-interpolation-filters="sRGB">
-                                          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                            result="hardAlpha" />
-                                          <feOffset dy="4" />
-                                          <feGaussianBlur stdDeviation="2" />
-                                          <feComposite in2="hardAlpha" operator="out" />
-                                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_111_6772" />
-                                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_111_6772" result="shape" />
-                                        </filter>
-                                      </defs>
-                                    </svg>
-                  
-                                    <p class="my-80">
-                                      6-month minimum commitment <br />
-                  
-                                      R 100 discount on each treatment <br />
-                  
-                                      Add-on R 200 per additional 30 minutes <br />
-                  
-                                      *90 mins = R850 <br />
-                  
-                                      *120 mins = R1050
-                                    </p>
-                  
-                                    <!-- <button class="btn btn-green px-5 py-3 text-white">
+                    <div class="col-md-4">
+                      <input type="radio" name="servicePrice" value="650" id="price3" />
+                      <label for="price3" class="d-block h-100">
+                        <div class="card h-100 green-border position-relative">
+                          <div class="card-body">
+                            <div class="text-center">
+                              <h3 class="mb-4 fs-20 fw-bold">PREMIUM MEMBER</h3>
+                              <hr />
+
+                              <div class="d-flex gap-1 justify-content-center align-items-start">
+                                R
+                                <h1 class="d-inline muted fw-bold price">650</h1>
+                              </div>
+
+                              <svg width="113" height="9" viewBox="0 0 113 9" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.2" filter="url(#filter0_d_111_6772)">
+                                  <line x1="4" y1="0.5" x2="109" y2="0.5" stroke="black" />
+                                </g>
+                                <defs>
+                                  <filter id="filter0_d_111_6772" x="0" y="0" width="113" height="9"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="4" />
+                                    <feGaussianBlur stdDeviation="2" />
+                                    <feComposite in2="hardAlpha" operator="out" />
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                      result="effect1_dropShadow_111_6772" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_111_6772"
+                                      result="shape" />
+                                  </filter>
+                                </defs>
+                              </svg>
+
+                              <p class="my-80">
+                                6-month minimum commitment <br />
+
+                                R 100 discount on each treatment <br />
+
+                                Add-on R 200 per additional 30 minutes <br />
+
+                                *90 mins = R850 <br />
+
+                                *120 mins = R1050
+                              </p>
+
+                              <!-- <button class="btn btn-green px-5 py-3 text-white">
                                       Select
                                     </button> -->
-                                  </div>
-                                </div>
-                              </div>
-                        </label>
-                      </div>
-                      <div class="text-end mt-5">
-                        <button type="submit" class="btn btn-green w-auto px-5">
-                          Next
-                        </button>
-                      </div>
-                    </form>
-                  </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="text-end mt-5">
+                      <button type="submit" class="btn btn-green w-auto px-5">
+                        Next
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- panel -->
-    </div>
-    <!-- jquery cdn -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      </div>
+    </section>
+    <!-- panel -->
+  </div>
+  <!-- jquery cdn -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- bootstrap cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- bootstrap cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- app js -->
-    <script src="js/app.js"></script>
+  <!-- app js -->
+  <script src="js/app.js"></script>
 
-    <script src="js/customer-dashboard.js"></script>
-    <script src="js/customer-logout.js"></script>
+  <script src="js/customer-dashboard.js"></script>
+  <script src="js/customer-logout.js"></script>
 
-    <script src="js/customer-booking-pricing.js"></script>
-  </body>
+  <script src="js/customer-booking-pricing.js"></script>
+</body>
+
 </html>

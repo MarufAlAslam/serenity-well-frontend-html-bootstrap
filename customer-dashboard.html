@@ -43,7 +43,7 @@
             <ul class="list-unstyled m-0 p-0">
               <li>
                 <a href="customer-dashboard.html" class="active menu-item text-decoration-none">
-                  Dashboard
+                  Home
                 </a>
               </li>
               <li>
@@ -70,69 +70,7 @@
           </div>
 
           <div class="col-md-10 main">
-            <!-- charts -->
-            <section class="charts py-4">
-              <div class="container">
-                <div class="row g-4">
-                  <div class="col-md-4">
-                    <div class="card shadow border-green">
-                      <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="left">
-                            <h4>Total Sessions</h4>
-                            <h6 class="green-link">
-                              <span id="session"></span>
-                            </h6>
-                          </div>
-                          <img src="img/chart1.svg" class="img-fluid" alt="" />
-                        </div>
-                        <p class="mb-0 mt-3">
-                          You were seen by <span id="num">0</span> different
-                          therapists
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card shadow border-violet">
-                      <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="left">
-                            <h4>Total Spent</h4>
-                            <h6 class="green-link">
-                              R
-                              <span id="spent">0</span>
-                            </h6>
-                          </div>
-                          <img src="img/chart2.svg" class="img-fluid" alt="" />
-                        </div>
-                        <p class="mb-0 mt-3">
-                          Number of treatments-
-                          <span id="bookingNumber"></span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card shadow border-black">
-                      <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="left">
-                            <h4>Bookings</h4>
-                            <h6 class="green-link">
-                              <span id="bookings"></span>
-                            </h6>
-                          </div>
-                          <img src="img/chart3.svg" class="img-fluid" alt="" />
-                        </div>
-                        <p class="mb-0 mt-3">Total number of Bookings</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- charts -->
+            
             <!-- secondary nav -->
             <section class="secondary-nav py-4">
               <div class="container">
@@ -152,6 +90,11 @@
                         Facials
                       </button>
                     </div>
+                  </div>
+                  <div class="col-md-6 text-end">
+                    <a href="customer-booking-details.html" class="btn btn-green w-auto">
+                      New Booking
+                    </a>
                   </div>
                 </div>
 
@@ -256,7 +199,7 @@
       $("#allServices").click(function () {
         $("#filterselect").hide();
         $("#services").html("");
-        fetch(`https://serinity-well-server.vercel.app/api/v1/therapistServices`, {
+        fetch(`http://localhost:8000/api/v1/therapistServices`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -379,7 +322,7 @@
           console.log(selected);
 
           fetch(
-            `https://serinity-well-server.vercel.app/api/v1/therapistServices/massage/${selected}`,
+            `http://localhost:8000/api/v1/therapistServices/massage/${selected}`,
             {
               method: "GET",
               headers: {
@@ -505,7 +448,7 @@
           console.log(selected);
 
           fetch(
-            `https://serinity-well-server.vercel.app/api/v1/therapistServices/nails/${selected}`,
+            `http://localhost:8000/api/v1/therapistServices/nails/${selected}`,
             {
               method: "GET",
               headers: {
@@ -632,7 +575,7 @@
         console.log(selected);
 
         fetch(
-          `https://serinity-well-server.vercel.app/api/v1/therapistServices/facials/${selected}`,
+          `http://localhost:8000/api/v1/therapistServices/facials/${selected}`,
           {
             method: "GET",
             headers: {

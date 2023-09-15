@@ -26,16 +26,13 @@ bookingExtraForm.addEventListener("submit", (e) => {
 
   // app.put("/api/v1/customerBookings/:id"
 
-  fetch(
-    `https://serinity-well-server.vercel.app/api/v1/customerBookings/${id}`,
-    {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ serviceExtra: data }),
-    }
-  )
+  fetch(`http://localhost:8000/api/v1/customerBookings/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ serviceExtra: data }),
+  })
     .then((res) => res.json())
     .then((data) => {
       if (data) {
