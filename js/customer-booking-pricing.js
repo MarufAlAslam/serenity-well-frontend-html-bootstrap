@@ -3,24 +3,6 @@ const pricing = document.getElementById("pricing");
 
 const pricingForm = document.getElementById("pricingForm");
 
-// fetch(`http://localhost:8000/api/v1/customerBookings/${bookingId}`, {
-//   method: "GET",
-
-//   headers: {
-//     "Content-Type": "application/json",
-//   },
-// })
-//   .then((res) => res.json())
-//   .then((data) => {
-//     console.log(data);
-//     const div = document.createElement("div");
-//     div.classList.add("pricing-card");
-//     div.innerHTML = `
-//     <h2 class="fw-bold text-center fs-1">R${data?.serviceDetails?.price}</h2>
-//         `;
-//     pricing.appendChild(div);
-//   });
-
 pricingForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -43,7 +25,15 @@ pricingForm.addEventListener("submit", (e) => {
       if (data) {
         alert("Booking Extra Added Successfully");
         // store user data in local storage
-        window.location.href = "/customer-booking-confirmation.html";
+        // window.location.href = "/customer-booking-confirmation.html";
+        const pricing = document.getElementById("pricing");
+        const confirmation = document.getElementById("confirmation");
+
+        pricing.style.display = "none";
+        confirmation.style.display = "block";
+
+        $('.tab-link').removeClass('active');
+        $('#confirmationbtn').addClass('active');
       } else {
         alert("Something Went Wrong!");
       }

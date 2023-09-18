@@ -87,7 +87,13 @@ initiateBookingForm.addEventListener("submit", (e) => {
 
         localStorage.setItem("bookingID", data.insertedId);
         // store user data in local storage
-        window.location.href = "/customer-booking-extra.html";
+        // window.location.href = "/customer-booking-extra.html";
+        const details_tab = document.getElementById("details_tab");
+        const extra = document.getElementById("extra");
+        details_tab.style.display = "none";
+        extra.style.display = "block";
+        $('.tab-link').removeClass('active');
+        $('#extrabtn').addClass('active');
       } else {
         alert("Something Went Wrong!");
       }

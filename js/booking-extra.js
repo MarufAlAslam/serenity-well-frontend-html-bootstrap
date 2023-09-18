@@ -1,5 +1,5 @@
 const bookingExtraForm = document.querySelector("#booking-extra-form");
-const id = localStorage.getItem("bookingID");
+const idd = localStorage.getItem("bookingID");
 
 bookingExtraForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -27,7 +27,7 @@ bookingExtraForm.addEventListener("submit", (e) => {
   // app.put("/api/v1/customerBookings/:id"
 
   fetch(
-    `http://localhost:8000/api/v1/customerBookings/${id}`,
+    `http://localhost:8000/api/v1/customerBookings/${idd}`,
     {
       method: "PUT",
       headers: {
@@ -41,7 +41,15 @@ bookingExtraForm.addEventListener("submit", (e) => {
       if (data) {
         alert("Booking Extra Added Successfully");
         // store user data in local storage
-        window.location.href = "/customer-booking-pricing.html";
+        // window.location.href = "/customer-booking-pricing.html";
+        const extra = document.getElementById("extra");
+        const pricing = document.getElementById("pricing");
+
+        extra.style.display = "none";
+        pricing.style.display = "block";
+
+        $('.tab-link').removeClass('active');
+        $('#pricingbtn').addClass('active');
       } else {
         alert("Something Went Wrong!");
       }

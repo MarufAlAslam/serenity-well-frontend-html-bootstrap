@@ -466,6 +466,22 @@ optgroup {
 :where(optgroup:not([label]) > option) {
   padding-inline-start: 2px;
 }
+input[type="radio"]:checked + label .green-border::before {
+  background: rgb(29, 69, 156) !important;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+#extra, #pricing, #confirmation, #payment{
+  display: none;
+}
+.tab-link{
+  border: unset !important;
+}
 @media screen and (max-width: 767px) {
   .dash {
     height: auto;

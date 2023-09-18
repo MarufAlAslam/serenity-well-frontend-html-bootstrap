@@ -182,5 +182,5 @@ const bookingConfirm = document.querySelector("#booking-confirm");
 
 bookingConfirm.addEventListener("click", (e) => {
   e.preventDefault();
-  window.location.href = "customer-booking-payment.html";
+//   window.location.href = "customer-booking-payment.html";
 });
