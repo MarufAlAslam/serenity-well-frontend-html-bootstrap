@@ -3,7 +3,7 @@ const pricing = document.getElementById("pricing");
 
 const pricingForm = document.getElementById("pricingForm");
 
-// fetch(`https://serinity-well-server.vercel.app/api/v1/customerBookings/${bookingId}`, {
+// fetch(`http://localhost:8000/api/v1/customerBookings/${bookingId}`, {
 //   method: "GET",
 
 //   headers: {
@@ -29,7 +29,7 @@ pricingForm.addEventListener("submit", (e) => {
 
   console.log(servicePrice);
   fetch(
-    `https://serinity-well-server.vercel.app/api/v1/customerBookings/${bookingId}`,
+    `http://localhost:8000/api/v1/customerBookings/${bookingId}`,
     {
       method: "PUT",
       headers: {
