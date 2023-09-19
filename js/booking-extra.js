@@ -39,6 +39,7 @@ bookingExtraForm.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((data) => {
       if (data) {
+        console.log(data)
         alert("Booking Extra Added Successfully");
         // store user data in local storage
         // window.location.href = "/customer-booking-pricing.html";

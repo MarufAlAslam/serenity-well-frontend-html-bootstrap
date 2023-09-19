@@ -126,7 +126,8 @@
               <div class="col-md-6 mx-auto">
                 <div class="card payment-card border-0">
                   <div class="card-body">
-                    <h2 class="fs-24">Payment Methods</h2>
+                    <h2 class="fs-24">Payment Info</h2>
+                    <p>You have to select the payment methods in next screen</p>
 
                     <form
                       action="https://www.payfast.co.za/eng/process"
@@ -135,7 +136,15 @@
                       onsubmit="return click_4b4cc514cb4f65acbe66b23c64b9e9dd( this );"
                       method="post"
                     >
-                      <div
+                      <div class="text-center">
+                        <h1 class="title fw-bold mb-5">
+                          Total Payable Amount: <br />
+                          <span class="text-green"
+                            >R <span id="servicePrice"></span
+                          ></span>
+                        </h1>
+                      </div>
+                      <!-- <div
                         class="d-flex justify-content-start align-items-start gap-2"
                       >
                         <input
@@ -253,8 +262,8 @@
                             </div>
                           </div>
                         </label>
-                      </div>
-                      <div
+                      </div> -->
+                      <!-- <div
                         class="d-flex mb-3 justify-content-start align-items-start gap-2"
                       >
                         <input
@@ -275,12 +284,12 @@
                                   Make payment directly through bank account.
                                 </p>
                               </div>
-                              <!-- <img src="img/cards.svg" class="img-fluid" alt=""> -->
+                             
                             </div>
                           </div>
                         </label>
-                      </div>
-                      <div
+                      </div> -->
+                      <!-- <div
                         class="d-flex mb-3 justify-content-start align-items-start gap-2"
                       >
                         <input
@@ -309,31 +318,34 @@
                             </div>
                           </div>
                         </label>
-                      </div>
+                      </div> -->
                       <input type="hidden" name="cmd" value="_paynow" />
                       <input
                         type="hidden"
                         name="receiver"
                         value="stoptrafficking@live.com"
                       />
-                      <input type="hidden" name="item_name" value="fs" />
-                      <input type="hidden" name="amount" value="1000.00" />
-                      <input type="hidden" name="item_description" value="" />
                       <input
+                        type="hidden"
+                        name="item_name"
+                        value="serenity.africa"
+                      />
+                      <input type="hidden" id="amount" name="amount" value="" />
+                      <input type="hidden" name="item_description" value="" />
+                      <!-- <input
                         type="hidden"
                         name="return_url"
-                        value="http://fs.com/thankyou.html"
-                      />
-                      <input
+                        value="./customer-booking-payment.html"
+                      /> -->
+                      <!-- <input
                         type="hidden"
                         name="cancel_url"
-                        value="http://fs.com/thankyou.html"
-                      />
+                        value="./customer-booking-payment.html"
+                      /> -->
                       <button
                         type="submit"
-                        href="customer-booking.html"
                         type="submit"
-                        class="btn btn-green w-auto px-5"
+                        class="btn d-block ms-auto btn-green w-auto px-5"
                       >
                         Next
                       </button>
@@ -366,6 +378,11 @@
     <script src="js/customer-logout.js"></script>
 
     <script language="JavaScript" type="text/javascript">
+      const amount = document.getElementById("amount");
+      const servicePriceField = document.getElementById("servicePrice");
+      const servicePrice = localStorage.getItem("servicePrice");
+      servicePriceField.innerHTML = servicePrice;
+      amount.value = servicePrice;
       function click_4b4cc514cb4f65acbe66b23c64b9e9dd(aform_reference) {
         var aform = aform_reference;
         aform["amount"].value =
