@@ -18,7 +18,7 @@ if (urlParams.has("id")) {
 console.log(id);
 
 fetch(
-  `http://localhost:8000/api/v1/therapistServices/${id}`,
+  `https://serenity-well-server.vercel.app/api/v1/therapistServices/${id}`,
   {
     method: "GET",
     headers: {

@@ -11,7 +11,7 @@ pricingForm.addEventListener("submit", (e) => {
 
   console.log(servicePrice);
   fetch(
-    `http://localhost:8000/api/v1/customerBookings/${bookingId}`,
+    `https://serenity-well-server.vercel.app/api/v1/customerBookings/${bookingId}`,
     {
       method: "PUT",
       headers: {

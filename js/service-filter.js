@@ -3,7 +3,7 @@ specializationInput.addEventListener("keyup", (e) => {
   if (value !== "") {
     servicesFiltered.innerHTML = "";
     fetch(
-      `http://localhost:8000/api/v1/therapistServices/${value}`,
+      `https://serenity-well-server.vercel.app/api/v1/therapistServices/${value}`,
       {
         method: "GET",
         headers: {
