@@ -5,7 +5,7 @@ const bookingID = localStorage.getItem("bookingID");
 // console.log(bookingID);
 
 fetch(
-  `https://serenity-well-server.vercel.app/api/v1/customerBookings/${bookingID}`,
+  `http://localhost:8000/api/v1/customerBookings/${bookingID}`,
   {
     method: "GET",
     headers: {

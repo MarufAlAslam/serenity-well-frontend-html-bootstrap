@@ -28,7 +28,7 @@ logoutBtn.addEventListener("click", () => {
 therapistServices.innerHTML = "";
 
 // get all services by therapist id
-fetch(`https://serenity-well-server.vercel.app/api/v1/therapistServices`, {
+fetch(`http://localhost:8000/api/v1/therapistServices`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",

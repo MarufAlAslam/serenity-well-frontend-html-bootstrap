@@ -22,7 +22,7 @@ const session = document.getElementById("session");
 const num = document.getElementById("num");
 
 // get all bookings
-fetch(`https://serenity-well-server.vercel.app/api/v1/customerBookings`, {
+fetch(`http://localhost:8000/api/v1/customerBookings`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const bookingNumber = document.getElementById("bookingNumber");
 const bookings = document.getElementById("bookings");
 
 // get all bookings
-fetch(`https://serenity-well-server.vercel.app/api/v1/customerBookings`, {
+fetch(`http://localhost:8000/api/v1/customerBookings`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
@@ -76,7 +76,7 @@ fetch(`https://serenity-well-server.vercel.app/api/v1/customerBookings`, {
 //   const value = e.target.value;
 //   if (value !== "") {
 //     servicesFiltered.innerHTML = "";
-//     fetch(`https://serenity-well-server.vercel.app/api/v1/therapistServices/${value}`, {
+//     fetch(`http://localhost:8000/api/v1/therapistServices/${value}`, {
 //       method: "GET",
 //       headers: {
 //         "Content-Type": "application/json",

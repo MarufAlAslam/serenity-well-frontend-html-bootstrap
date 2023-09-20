@@ -27,7 +27,7 @@ bookingExtraForm.addEventListener("submit", (e) => {
   // app.put("/api/v1/customerBookings/:id"
 
   fetch(
-    `https://serenity-well-server.vercel.app/api/v1/customerBookings/${idd}`,
+    `http://localhost:8000/api/v1/customerBookings/${idd}`,
     {
       method: "PUT",
       headers: {

@@ -2,7 +2,7 @@ const therapistCount = document.getElementById("therapistCount");
 const therapistTable = document.getElementById("therapist-table");
 // get therapist count
 
-fetch("https://serenity-well-server.vercel.app/api/v1/therapists", {
+fetch("http://localhost:8000/api/v1/therapists", {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
@@ -37,7 +37,7 @@ fetch("https://serenity-well-server.vercel.app/api/v1/therapists", {
 const totalIncome = document.getElementById("totalIncome");
 let total = 0;
 // get all bookings
-fetch(`https://serenity-well-server.vercel.app/api/v1/customerBookings`, {
+fetch(`http://localhost:8000/api/v1/customerBookings`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",

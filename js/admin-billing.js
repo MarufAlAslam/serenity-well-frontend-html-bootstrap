@@ -2,7 +2,7 @@ const totalIncome = document.getElementById("totalIncome");
 let total = 0;
 
 // get all bookings
-fetch(`https://serenity-well-server.vercel.app/api/v1/customerBookings`, {
+fetch(`http://localhost:8000/api/v1/customerBookings`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
