@@ -40,30 +40,29 @@
                   class="img-fluid w-25 mb-5"
                   alt=""
                 />
-                
               </div>
 
               <h2 class="fs-32 fw-bold">Login to your Account</h2>
               <p>See what is going on with your business</p>
-              <form action="customer-confirm.html" class="mt-4">
+              <form action="" class="mt-4" id="otpVerificationForm">
                 <div class="item mb-4">
-                  <label for="">Phone Number or Email Address</label>
+                  <label for="">Email Address</label>
                   <input
-                  required
+                    required
                     type="text"
                     class="form-control mt-2 bg-transparent border-2"
-                    name=""
-                    placeholder="Enter phone number or email address"
+                    name="customerEmail"
+                    placeholder="Enter email address"
                     id=""
                   />
                 </div>
                 <div class="item mb-4">
                   <label for="">Capture OTP</label>
                   <input
-                  required
+                    required
                     type="text"
                     class="form-control mt-2 bg-transparent border-2"
-                    name=""
+                    name="otp"
                     placeholder="Enter OTP"
                     id=""
                   />
@@ -73,26 +72,26 @@
                   class="item mb-4 d-flex justify-content-between items-center"
                 >
                   <div class="d-flex gap-2">
-                    
                     <label for="remember">Login with Password</label>
                   </div>
                   <div class="text-end">
-                    <a href="" class="green-link text-decoration-none">
-                     
-                    </a>
+                    <a href="" class="green-link text-decoration-none"> </a>
                   </div>
                 </div>
 
                 <div class="item mb-4">
-                <a href="customer-dashboard.html"button type="submit" class="btn btn-green py-3">
-                    Login</a>
+                  <button type="submit" class="btn btn-green py-3">
+                    Login
                   </button>
+                  >
                 </div>
                 <p>
-                <a href="customer-signup.html" class="green-link"
-                    >  Register Account</a> |
-                  <a href="forgot-password.html" class="green-link"
-                    > Forgot Password</a
+                  <a href="customer-signup.html" class="green-link">
+                    Register Account</a
+                  >
+                  |
+                  <a href="forgot-password.html" class="green-link">
+                    Forgot Password</a
                   >
                 </p>
               </form>
@@ -110,5 +109,33 @@
 
     <!-- app js -->
     <script src="js/app.js"></script>
+
+    <script>
+      const otpVerificationForm = document.getElementById(
+        "otpVerificationForm"
+      );
+
+      otpVerificationForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const form = e.target;
+        const customerEmail = form.customerEmail.value;
+        const otp = form.otp.value;
+
+        const currentActiveUser = JSON.parse(
+          localStorage.getItem("activeUser")
+        );
+
+        const currentUserOtp = currentActiveUser.otpCode;
+        const currentUserEmail = currentActiveUser.result.email;
+
+        if (customerEmail === currentUserEmail && otp === currentUserOtp) {
+          alert("OTP Verified | Login Successful");
+          window.location.href = "customer-dashboard.html";
+        } else {
+          alert("Invalid OTP or EMAIL");
+        }
+      });
+    </script>
   </body>
 </html>
