@@ -1,6 +1,8 @@
 const services = document.querySelector("#services");
 let flag = 0;
 
+// services.innerHTML = `Loading...`;
+
 fetch("https://serenity-well-server.vercel.app/api/v1/therapistServices", {
   method: "GET",
   headers: {
@@ -11,6 +13,7 @@ fetch("https://serenity-well-server.vercel.app/api/v1/therapistServices", {
   .then((data) => {
     // console.log(data);
     if (data) {
+      services.innerHTML = "";
       data.forEach((item) => {
         const service = document.createElement("div");
         const fullName = item.addedBy.split(" ").slice(0, 2).join(" ");
