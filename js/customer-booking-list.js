@@ -15,6 +15,7 @@ fetch(`https://serenity-well-server.vercel.app/api/v1/customerBookings`, {
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
+    bookingTable.innerHTML = "";
     data.forEach((item) => {
       if (item?.serviceDetails?.userrID === usrID) {
         const tr = document.createElement("tr");
