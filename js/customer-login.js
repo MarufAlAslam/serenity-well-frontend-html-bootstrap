@@ -32,10 +32,36 @@ customerLoginForm.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((data) => {
       if (data) {
-        alert("OTP Sent!");
-        // store user data in local storage
-        localStorage.setItem("activeUser", JSON.stringify(data));
-        window.location.href = "customer-otp.html";
+        console.log(data);
+        
+        // send email to user
+
+        const sender = "marufalaslam@gmail.com";
+        const password = "73A58125CA7B6D892B9C9A0AE91EF36FB7EE";
+        const server = "smtp.elasticemail.com";
+        const port = 2525;
+        const receiver = data.result.email;
+        const subject = "Serenity Well - OTP";
+        const message = `Your OTP is ${data.otpCode}`;
+
+        //  send email using smtp
+        Email.send({
+          Host: server,
+          Port: port,
+          Username: sender,
+          Password: password,
+          To: receiver,
+          From: sender,
+          Subject: subject,
+          Body: message,
+        }).then((message) => {
+          console.log(message);
+          alert("OTP Sent!");
+          // store user data in local storage
+          localStorage.setItem("activeUser", JSON.stringify(data));
+          
+          window.location.href = "customer-otp.html";
+        });
       } else {
         alert("Invalid Credentials");
       }

@@ -1,88 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serenity Well</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Serenity Well</title>
+    <!-- bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- bootstrap cdn -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- google fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <!-- style css -->
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-  <div class="wrapper">
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-        <div class="col-md-6 p-0">
-          <img src="img/c-login.png" class="img-fluid h-100 w-100 object-fit-cover" alt="" />
-        </div>
-        <div class="col-md-6 p-0">
-          <div class="grad py-5 h-100">
-            <div class="text-center mb-5">
-              <img src="img/logo-big.png" class="img-fluid w-25 mb-5" alt="" />
-              <button class="btn btn-outline-dark d-block w-100">
-                <img src="img/google.png" class="img-fluid mr-3" alt="" />
-                Continue with Google
-              </button>
-            </div>
-
-            <h2 class="fs-32 fw-bold">Login to your Account</h2>
-            <!-- <p>See what is going on with your business</p> -->
-            <form action="" class="mt-4" id="customerLoginForm">
-              <div class="item mb-4">
-                <label for="">Phone Number or Email Address</label>
-                <input required type="text" class="form-control mt-2 bg-transparent border-2" name="email"
-                  placeholder="Enter phone number or email address" id="" />
-              </div>
-              <div class="item mb-4">
-                <label for="">Password</label>
-                <input required type="text" class="form-control mt-2 bg-transparent border-2" name="password"
-                  placeholder="*****************" id="" />
+  <body>
+    <div class="wrapper">
+      <div class="container-fluid p-0">
+        <div class="row g-0">
+          <div class="col-md-6 p-0">
+            <img
+              src="img/c-login.png"
+              class="img-fluid h-100 w-100 object-fit-cover"
+              alt=""
+            />
+          </div>
+          <div class="col-md-6 p-0">
+            <div class="grad py-5 h-100">
+              <div class="text-center mb-5">
+                <img
+                  src="img/logo-big.png"
+                  class="img-fluid w-25 mb-5"
+                  alt=""
+                />
+                <button class="btn btn-outline-dark d-block w-100">
+                  <img src="img/google.png" class="img-fluid mr-3" alt="" />
+                  Continue with Google
+                </button>
               </div>
 
-              <!-- <div class="item mb-4">
+              <h2 class="fs-32 fw-bold">Login to your Account</h2>
+              <!-- <p>See what is going on with your business</p> -->
+              <form action="" class="mt-4" id="customerLoginForm">
+                <div class="item mb-4">
+                  <label for="">Phone Number or Email Address</label>
+                  <input
+                    required
+                    type="text"
+                    class="form-control mt-2 bg-transparent border-2"
+                    name="email"
+                    placeholder="Enter phone number or email address"
+                    id=""
+                  />
+                </div>
+                <div class="item mb-4">
+                  <label for="">Password</label>
+                  <input
+                    required
+                    type="text"
+                    class="form-control mt-2 bg-transparent border-2"
+                    name="password"
+                    placeholder="*****************"
+                    id=""
+                  />
+                </div>
+
+                <!-- <div class="item mb-4">
                 <a href="" class="text-decoration-none green-link">
                   Login Via SMS
                 </a>
               </div> -->
 
-              <div class="item mb-4">
-                <button type="submit" class="btn btn-green py-3">
-                  Login
-                </button>
-              </div>
-              <p>
-                <a href="customer-signup.html" class="green-link">Register</a>
-                |
-                <a href="customer-login.html" class="green-link">Forgot Password</a>
-              </p>
-            </form>
+                <div class="item mb-4">
+                  <button type="submit" class="btn btn-green py-3">
+                    Login
+                  </button>
+                </div>
+                <p>
+                  <a href="customer-signup.html" class="green-link">Register</a>
+                  |
+                  <a href="customer-login.html" class="green-link"
+                    >Forgot Password</a
+                  >
+                </p>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- jquery cdn -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- bootstrap cdn -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- app js -->
-  <script src="js/app.js"></script>
+    <!-- app js -->
+    <script src="js/app.js"></script>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-  <!-- customer login -->
-  <script src="js/customer-login.js"></script>
-</body>
-
+    <!-- customer login -->
+    <script src="js/customer-login.js"></script>
+  </body>
 </html>
