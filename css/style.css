@@ -520,6 +520,8 @@ input[type="radio"]:checked + label .green-border::before {
   }
   table {
     min-width: 120% !important;
+     /* sender = "marufalaslam@gmail.com";
+     password = "73A58125CA7B6D892B9C9A0AE91EF36FB7EE"; */
   }
   .grad.bg-white.py-5.h-100 {
     padding: 20px;

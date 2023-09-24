@@ -36,8 +36,8 @@ customerLoginForm.addEventListener("submit", (e) => {
         
         // send email to user
 
-        const sender = "marufalaslam@gmail.com";
-        const password = "73A58125CA7B6D892B9C9A0AE91EF36FB7EE";
+        const sender = "serenitywell03@gmail.com";
+        const password = "50032CC4F79A56D07AAD309E184165C002BC";
         const server = "smtp.elasticemail.com";
         const port = 2525;
         const receiver = data.result.email;
