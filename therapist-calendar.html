@@ -1,67 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Serenity Well</title>
 
     <!-- bootstrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- fontawesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
     <!-- calendar -->
-    <link rel="stylesheet" href="powerful-calendar/style.css">
-    <link rel="stylesheet" href="powerful-calendar/theme.css">
+    <!-- <link rel="stylesheet" href="powerful-calendar/style.css" />
+    <link rel="stylesheet" href="powerful-calendar/theme.css" /> -->
 
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css" />
-</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <style>
+      .daterangepicker.ltr.show-calendar.opensright {
+        width: 800px;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
     <div class="dash">
-        <!-- topbar -->
-        <section class="topbar py-2 bg-white">
-            <div class="container-fluid px-3">
-                <div class="d-flex justify-content-between align-items-center">
-                    <a href="">
-                        <img src="img/dashboard-logo.png" class="img-fluid" alt="" />
-                    </a>
-                    <a href="" class="avatar" id="avatar"> BB </a>
-                </div>
-            </div>
-        </section>
-        <!-- topbar -->
+      <!-- topbar -->
+      <section class="topbar py-2 bg-white">
+        <div class="container-fluid px-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <a href="">
+              <img src="img/dashboard-logo.png" class="img-fluid" alt="" />
+            </a>
+            <a href="" class="avatar" id="avatar"> BB </a>
+          </div>
+        </div>
+      </section>
+      <!-- topbar -->
 
-        <!-- panel -->
-        <section class="panel py-2">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-2 sidebar">
-                        <ul class="list-unstyled m-0 p-0">
-                            <li>
-                                <a href="therapist-dashboard.html" class="menu-item text-decoration-none">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="therapist-bookings.html" class="menu-item text-decoration-none">
-                                    Dashboard
-                                </a>
-                            </li>
-                            <li>
-                                <a href="therapist-calendar.html" class="active menu-item text-decoration-none">
-                                    Availability
-                                </a>
-                            </li>
-                            <!-- <li>
+      <!-- panel -->
+      <section class="panel py-2">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-2 sidebar">
+              <ul class="list-unstyled m-0 p-0">
+                <li>
+                  <a
+                    href="therapist-dashboard.html"
+                    class="menu-item text-decoration-none"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="therapist-bookings.html"
+                    class="menu-item text-decoration-none"
+                  >
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="therapist-calendar.html"
+                    class="active menu-item text-decoration-none"
+                  >
+                    Availability
+                  </a>
+                </li>
+                <!-- <li>
                                 <a href="therapist-billing.html" class="menu-item text-decoration-none">
                                     Billing
                                 </a>
@@ -79,60 +104,94 @@
                                     Setting
                                 </a>
                             </li> -->
-                            <li>
-                                <button href="customer-login.html" class="menu-item text-decoration-none btn"
-                                    id="logout">
-                                    Sign Out
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-10 main">
-                        <div class="row g-4 py-5">
-                            <div class="col-md-9">
-                                <div class="card border-0 shadow rounded-2">
-                                    <div class="card-body">
-                                        <div class="calendar-container"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card shadow rounded-2 overflow-hidden border-0">
-                                    <div class="card-body py-4">
-                                        <div class="text-center">
-                                            <h2 class="fs-24 text-green fw-bold">
-                                                Schedule Details
-                                            </h2>
-                                            <p class="fs-14">
-                                                Thursday, 10th March 2023
-                                            </p>
-
-                                            <form action="">
-                                                <div class="form-floating mb-3">
-                                                    <input required type="email" class="form-control select"
-                                                        id="floatingInput" placeholder="name@example.com" />
-                                                    <label class="mb-0" for="floatingInput">Available dates</label>
-                                                </div>
-                                                <div class="form-floating mb-3">
-                                                    <input required type="email" class="form-control select"
-                                                        id="floatingInput" placeholder="name@example.com" />
-                                                    <label class="mb-0" for="floatingInput">Available time slots</label>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <li>
+                  <button
+                    href="customer-login.html"
+                    class="menu-item text-decoration-none btn"
+                    id="logout"
+                  >
+                    Sign Out
+                  </button>
+                </li>
+              </ul>
             </div>
-        </section>
-        <!-- panel -->
+
+            <div class="col-md-10 main">
+              <div class="row g-4 py-5">
+                <div class="col-md-9">
+                  <div class="card border-0 shadow rounded-2">
+                    <div class="card-body position-relative">
+                      <!-- <div class="calendar-container"></div> -->
+                      <form action="" class="position-relative w-100">
+                        <h3 class="mb-4">Select Availability Range</h3>
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="dates"
+                          id=""
+                        />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card shadow rounded-2 overflow-hidden border-0">
+                    <div class="card-body py-4">
+                      <div class="text-center">
+                        <h2 class="fs-24 text-green fw-bold">
+                          Schedule Details
+                        </h2>
+                        <p class="fs-14">Thursday, 10th March 2023</p>
+
+                        <form action="">
+                          <div class="form-floating mb-3">
+                            <input
+                              required
+                              type="email"
+                              class="form-control select"
+                              id="floatingInput"
+                              placeholder="name@example.com"
+                            />
+                            <label class="mb-0" for="floatingInput"
+                              >Available dates</label
+                            >
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input
+                              required
+                              type="email"
+                              class="form-control select"
+                              id="floatingInput"
+                              placeholder="name@example.com"
+                            />
+                            <label class="mb-0" for="floatingInput"
+                              >Available time slots</label
+                            >
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- panel -->
     </div>
     <!-- jquery cdn -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
 
     <!-- calendar -->
     <script src="powerful-calendar/calendar.min.js"></script>
@@ -145,12 +204,49 @@
 
     <script src="js/therapist-dashboard.js"></script>
 
-
     <script>
-        $(function () {
-            $('.calendar-container').calendar();
+      $(function () {
+        $(".calendar-container").calendar();
+        $('input[name="dates"]').daterangepicker({
+          opens: "right",
+          width: "100%",
         });
-    </script>
-</body>
+      });
 
+      //   console.log the value of dates
+      $('input[name="dates"]').on(
+        "apply.daterangepicker",
+        function (ev, picker) {
+          console.log(picker.startDate.format("MM/DD/YYYY"));
+          console.log(picker.endDate.format("MM/DD/YYYY"));
+
+          const currTherap = localStorage.getItem("activeTherapist");
+          const therapId = JSON.parse(currTherap)._id;
+
+          fetch(
+            `https://serenity-well-server.vercel.app/api/v1/therapists/${therapId}`,
+            {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                availableDates: {
+                  startDate: picker.startDate.format("MM/DD/YYYY"),
+                  endDate: picker.endDate.format("MM/DD/YYYY"),
+                },
+              }),
+            }
+          )
+            .then((res) => res.json())
+            .then((data) => {
+              if (data) {
+                console.log(data);
+                alert("Availability updated successfully");
+              }
+            });
+        }
+      );
+    </script>
+  </body>
 </html>

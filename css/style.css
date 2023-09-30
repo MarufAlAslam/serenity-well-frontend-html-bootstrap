@@ -469,17 +469,20 @@ optgroup {
 input[type="radio"]:checked + label .green-border::before {
   background: rgb(29, 69, 156) !important;
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   opacity: 0.2;
 }
-#extra, #pricing, #confirmation, #payment{
+#extra,
+#pricing,
+#confirmation,
+#payment {
   display: none;
 }
-.tab-link{
+.tab-link {
   border: unset !important;
 }
 @media screen and (max-width: 767px) {
@@ -520,11 +523,20 @@ input[type="radio"]:checked + label .green-border::before {
   }
   table {
     min-width: 120% !important;
-     /* sender = "marufalaslam@gmail.com";
+    /* sender = "marufalaslam@gmail.com";
      password = "73A58125CA7B6D892B9C9A0AE91EF36FB7EE"; */
   }
   .grad.bg-white.py-5.h-100 {
     padding: 20px;
+  }
+  .daterangepicker {
+    min-width: 800px !important;
+    width: 800px !important;
+    max-width: 100% !important;
+  }
+  .calendar-table * {
+    width: 100% !important;
+    background: white;
   }
   .wrapper img.img-fluid.h-100.w-100.object-fit-cover {
     display: none;
