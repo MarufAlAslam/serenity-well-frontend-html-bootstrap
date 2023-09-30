@@ -538,6 +538,23 @@ input[type="radio"]:checked + label .green-border::before {
     width: 100% !important;
     background: white;
   }
+  section.booking .col-md-4 {
+    filter: blur(15px);
+    opacity: 0.5;
+    position: relative;
+  }
+  section.booking {
+    position: relative;
+  }
+  section.booking::after {
+    content: "COMING SOON";
+    position: absolute;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+  }
   .wrapper img.img-fluid.h-100.w-100.object-fit-cover {
     display: none;
   }
