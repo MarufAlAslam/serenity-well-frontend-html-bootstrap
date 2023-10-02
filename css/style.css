@@ -546,6 +546,9 @@ input[type="radio"]:checked + label .green-border::before {
   section.booking {
     position: relative;
   }
+  section.booking .col-md-4, section.booking h3, section.booking svg {
+    filter: blur(15px) !important;
+}
   section.booking::after {
     content: "COMING SOON";
     position: absolute;

@@ -26,6 +26,7 @@ addAdminForm.addEventListener("submit", (e) => {
     .then((data) => {
       if (data) {
         alert("Admin added successfully");
+        window.location.href = "admin-dashboard.html";
       }
     });
 });
