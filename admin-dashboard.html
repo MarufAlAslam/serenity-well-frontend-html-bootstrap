@@ -65,16 +65,16 @@
                     Dashboard
                   </a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="" class="menu-item text-decoration-none">
                     Therapists
                   </a>
-                </li>
-                <li>
+                </li> -->
+                <!-- <li>
                   <a href="" class="menu-item text-decoration-none">
                     Statistics
                   </a>
-                </li>
+                </li> -->
                 <li>
                   <div class="line"></div>
                 </li>
@@ -86,24 +86,40 @@
                     Applications
                   </a>
                 </li>
-                <li>
+                <!-- <li>
                   <a
                     href="admin-billing.html"
                     class="menu-item text-decoration-none"
                   >
                     Billing
                   </a>
-                </li>
-                <li>
+                </li> -->
+                <!-- <li>
                   <div class="line"></div>
-                </li>
-                <li>
+                </li> -->
+                <!-- <li>
                   <a href="" class="menu-item text-decoration-none">
                     Setting
                   </a>
-                </li>
-                <li>
+                </li> -->
+                <!-- <li>
                   <a href="" class="menu-item text-decoration-none"> Label </a>
+                </li> -->
+                <li>
+                  <button
+                    id="logout"
+                    class="btn menu-item text-decoration-none"
+                  >
+                    Log Out
+                  </button>
+                  <script>
+                    document
+                      .getElementById("logout")
+                      .addEventListener("click", function () {
+                        localStorage.removeItem("admin");
+                        window.location.href = "admin-login.html";
+                      });
+                  </script>
                 </li>
               </ul>
             </div>
@@ -116,11 +132,13 @@
                 <div
                   class="d-flex justify-content-start gap-3 align-items-center"
                 >
-                  <a href="" class="avatar"> BB </a>
+                  <a href="" class="avatar"> A </a>
                   <div class="">
                     <h4>Dashboard overview</h4>
+
                     <p class="fs-12 mb-0">
-                      Welcome {{Billy Becker}} to your dahboard overview
+                      Welcome <span id="admin_name" class="fw-bold"></span> to
+                      your dahboard overview
                     </p>
                   </div>
                 </div>
@@ -128,7 +146,7 @@
                   class="d-flex justify-content-end gap-3 align-items-center"
                 >
                   <div class="text-end">
-                    <p class="fs-12 mb-0">billy.becker@eoh.com</p>
+                    <p class="fs-12 mb-0" id="adminEmail"></p>
                     <p class="fs-12 mb-0">AppDev - 363</p>
                   </div>
                   <a href="add-admin.html" class="btn btn-green">
@@ -185,7 +203,10 @@
                     </div>
                   </div>
                   <div class="col-md-3">
-                    <a href="https://serenity-reg.netlify.app/" class="text-decoration-none">
+                    <a
+                      href="https://serenity-reg.netlify.app/"
+                      class="text-decoration-none"
+                    >
                       <div class="card overflow-hidden bg-black border-0">
                         <div class="row g-0">
                           <div class="col-8 m-auto p-3 h-100">
@@ -210,18 +231,10 @@
 
                 <table class="table mt-4 table-striped" id="therapist-table">
                   <tr>
-                    <td class="border-0 p-3">
-                      Therapist Name
-                    </td>
-                    <td class="border-0 p-3">
-                      Therapist Email
-                    </td>
-                    <td class="border-0 p-3">
-                      Therapist Phone
-                    </td>
-                    <td class="border-0 p-3">
-                      Therapist Address
-                    </td>
+                    <td class="border-0 p-3">Therapist Name</td>
+                    <td class="border-0 p-3">Therapist Email</td>
+                    <td class="border-0 p-3">Therapist Phone</td>
+                    <td class="border-0 p-3">Therapist Address</td>
                     <td class="border-0 p-3"></td>
                   </tr>
                 </table>
@@ -244,5 +257,16 @@
 
     <!-- admin dashboard js -->
     <script src="js/admin-dashboard.js"></script>
+
+    <script>
+      const currentAdmin = JSON.parse(localStorage.getItem("admin"));
+
+      if (currentAdmin) {
+        const adminEmail = currentAdmin.email;
+        const adminName = adminEmail.split("@")[0];
+        document.getElementById("admin_name").innerHTML = adminName;
+        document.getElementById("adminEmail").innerHTML = adminEmail;
+      }
+    </script>
   </body>
 </html>

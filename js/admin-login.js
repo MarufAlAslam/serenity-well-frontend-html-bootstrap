@@ -1,4 +1,9 @@
 const adminLoginForm = document.getElementById("admin-login-form");
+const currentAdmin = JSON.parse(localStorage.getItem("admin"));
+
+if (currentAdmin) {
+  window.location.href = "admin-dashboard.html";
+}
 
 adminLoginForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -25,6 +30,7 @@ adminLoginForm.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((data) => {
       if (data) {
+        localStorage.setItem("admin", JSON.stringify(data));
         window.location.href = "admin-dashboard.html";
       } else {
         alert("wrong credentials!!");

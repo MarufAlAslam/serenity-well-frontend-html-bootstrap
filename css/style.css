@@ -546,9 +546,11 @@ input[type="radio"]:checked + label .green-border::before {
   section.booking {
     position: relative;
   }
-  section.booking .col-md-4, section.booking h3, section.booking svg {
+  section.booking .col-md-4,
+  section.booking h3,
+  section.booking svg {
     filter: blur(15px) !important;
-}
+  }
   section.booking::after {
     content: "COMING SOON";
     position: absolute;
@@ -594,4 +596,17 @@ input[type="radio"]:checked + label .green-border::before {
     border-radius: 50%;
     vertical-align: middle;
   }
+}
+
+section.booking .col-md-4 {
+  filter: blur(20px);
+  opacity: 0.6;
+}
+h3.section-title.fw-bold.coming-soon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  z-index: 1000;
 }

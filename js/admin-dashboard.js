@@ -14,7 +14,9 @@ fetch("https://serenity-well-server.vercel.app/api/v1/therapists", {
     data.forEach((therapist) => {
       const tr = document.createElement("tr");
       tr.innerHTML = `<td class="border-0 p-3">
+      <a href="therapist-profile.html?id=${therapist._id}">
       ${therapist.fullname}
+      </a>
       </td>
       <td class="border-0 p-3">
         ${therapist.email}
