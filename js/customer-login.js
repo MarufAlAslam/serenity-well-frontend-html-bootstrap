@@ -33,35 +33,39 @@ customerLoginForm.addEventListener("submit", (e) => {
     .then((data) => {
       if (data) {
         console.log(data);
-        
+        alert("Login Successful!");
+        // store user data in local storage
+        localStorage.setItem("activeUser", JSON.stringify(data));
+        window.location.href = "customer-dashboard.html";
+
         // send email to user
 
-        const sender = "serenitywell03@gmail.com";
-        const password = "50032CC4F79A56D07AAD309E184165C002BC";
-        const server = "smtp.elasticemail.com";
-        const port = 2525;
-        const receiver = data.result.email;
-        const subject = "Serenity Well - OTP";
-        const message = `Your OTP is ${data.otpCode}`;
+        // const sender = "serenitywell03@gmail.com";
+        // const password = "50032CC4F79A56D07AAD309E184165C002BC";
+        // const server = "smtp.elasticemail.com";
+        // const port = 2525;
+        // const receiver = data.result.email;
+        // const subject = "Serenity Well - OTP";
+        // const message = `Your OTP is ${data.otpCode}`;
 
         //  send email using smtp
-        Email.send({
-          Host: server,
-          Port: port,
-          Username: sender,
-          Password: password,
-          To: receiver,
-          From: sender,
-          Subject: subject,
-          Body: message,
-        }).then((message) => {
-          console.log(message);
-          alert("OTP Sent!");
-          // store user data in local storage
-          localStorage.setItem("activeUser", JSON.stringify(data));
-          
-          window.location.href = "customer-otp.html";
-        });
+        // Email.send({
+        //   Host: server,
+        //   Port: port,
+        //   Username: sender,
+        //   Password: password,
+        //   To: receiver,
+        //   From: sender,
+        //   Subject: subject,
+        //   Body: message,
+        // }).then((message) => {
+        //   console.log(message);
+        //   alert("OTP Sent!");
+        // // store user data in local storage
+        // localStorage.setItem("activeUser", JSON.stringify(data));
+
+        // window.location.href = "customer-otp.html";
+        // });
       } else {
         alert("Invalid Credentials");
       }
