@@ -54,7 +54,7 @@ fetch("https://serenity-well-server.vercel.app/api/v1/customerBookings", {
               <p class="mb-0">Service</p>
               <p class="fs-11 mb-0">
                   ${item?.serviceDetails?.serviceData?.serviceDetails?.nailCare},
-                  ${item?.serviceDetails?.serviceData?.serviceDetails?.masage},
+                  ${item?.serviceDetails?.serviceData?.serviceDetails?.massage},
                   ${item?.serviceDetails?.serviceData?.serviceDetails?.facials}
               </p>
           </div>

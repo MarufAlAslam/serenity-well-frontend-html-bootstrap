@@ -75,7 +75,7 @@ specializationInput.addEventListener("keyup", (e) => {
                                         item.serviceDetails.nailCare
                                       } <br />
                                       <b>Masaage:</b> ${
-                                        item.serviceDetails.masage
+                                        item.serviceDetails.massage
                                       } <br />
                                       <b>Facials:</b> ${
                                         item.serviceDetails.facials

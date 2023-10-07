@@ -37,7 +37,7 @@ fetch(
     serviceDetails.appendChild(span1);
 
     const span2 = document.createElement("span");
-    span2.innerHTML = data.serviceDetails.masage;
+    span2.innerHTML = data.serviceDetails.massage;
     serviceDetails.appendChild(span2);
 
     const span3 = document.createElement("span");

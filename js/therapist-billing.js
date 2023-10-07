@@ -63,7 +63,7 @@ fetch(`https://serenity-well-server.vercel.app/api/v1/customerBookings`, {
                                                                 ?.serviceDetails
                                                                 ?.serviceData
                                                                 ?.serviceDetails
-                                                                ?.masage
+                                                                ?.massage
                                                             } <br> <br>
                                                             Facials : ${
                                                               item

@@ -14,7 +14,7 @@ addServiceForm.addEventListener("submit", (e) => {
   const subSpecialization = form.subSpecialization.value;
   const price = form.price.value;
   // const nailCare = form.nail.value;
-  // const masage = form.masage.value;
+  // const massage = form.massage.value;
   // const facials = form.facials.value;
 
   // qualifications details

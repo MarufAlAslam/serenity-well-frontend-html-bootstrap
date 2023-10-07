@@ -22,7 +22,7 @@ fetch("https://serenity-well-server.vercel.app/api/v1/therapistServices", {
       const option = document.createElement("option");
       option.value = item?.serviceName ? item?.serviceName : item.serviceDetails.specialization;
       id = item._id;
-      option.innerText = item?.serviceName ? item?.serviceName : item.serviceDetails.specialization;
+      option.innerText = item?.serviceName ? item?.addedBy +"-"+ item?.serviceName : item?.addedBy +"-" + item.serviceDetails.specialization;
       serviceSelect.appendChild(option);
     });
   });
