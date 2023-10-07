@@ -18,6 +18,8 @@ fetch(`https://serenity-well-server.vercel.app/api/v1/customerBookings`, {
     bookingTable.innerHTML = "";
     data.forEach((item) => {
       if (item?.serviceDetails?.userrID === usrID) {
+        const bID = document.getElementById("bID");
+        bID.value = item._id;
         const tr = document.createElement("tr");
         tr.innerHTML = `
         <td>
@@ -45,6 +47,13 @@ fetch(`https://serenity-well-server.vercel.app/api/v1/customerBookings`, {
           item._id
         }">Cancel Booking</span> 
       </button></li>
+      <li><button data-bs-toggle="modal" data-bs-target="#reviewModal" data-id="${
+        item._id
+      }" class="deleteBtn dropdown-item">
+      <i class="fas fa-star ms-0" data-id="${item._id}"></i> <span data-id="${
+          item._id
+        }">Review</span> 
+      </button></li>
       <li><button class="dropdown-item"><i class="fas fa-calendar"></i> Postpone Booking</button></li>
     </ul>
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -68,6 +77,7 @@ fetch(`https://serenity-well-server.vercel.app/api/v1/customerBookings`, {
     </div>
   </div>
 </div>
+
   </div>
     </td>
                 `;
@@ -108,3 +118,5 @@ fetch(`https://serenity-well-server.vercel.app/api/v1/customerBookings`, {
 //     console.log(id);
 //   });
 // });
+
+
